@@ -28,7 +28,7 @@ Manage Redis server keys(show-edit-delete)
   Then, use the `create-project` command to generate a new application:
   
  ```php
-    create-project snip77/redis-console -s dev path/to/install
+    composer create-project snip77/redis-console -s dev path/to/install
  ```
  #### Composer will install the Beanstalk Console and all its dependencies under the `path/to/install` directory.
  
