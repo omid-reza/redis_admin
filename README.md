@@ -2,9 +2,11 @@
 Manage Redis server keys(show-edit-delete)
 
 ### requirments
-  - Redis
+#### Redis
+  
       Install redis from https://redis.io/download for you os
-  - Php
+ #### Php
+  
       You should have php for start server
  
 ### setup host and port :
