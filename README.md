@@ -1,6 +1,13 @@
 # redis-console
 Manage Redis server keys(show-edit-delete)
 
+## Features :
+  - see all keys
+  - see record detail
+  - search for match keys
+  - edit keys(Still only strings)
+  - delete keys
+  
 ### requirments
 #### Redis
   
