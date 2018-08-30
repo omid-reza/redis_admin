@@ -15,6 +15,22 @@ Manage Redis server keys(show-edit-delete)
  #### Php
   
       You should have php for start server
+
+
+## Installation :
+
+###   Use composer:
+   If you don't have Composer yet, download it following the instructions on http://getcomposer.org/ or just run the following command:
+
+```php
+    curl -s http://getcomposer.org/installer | php 
+```
+  Then, use the `create-project` command to generate a new application:
+  
+ ```php
+    create-project snip77/redis-console -s dev path/to/install
+ ```
+ #### Composer will install the Beanstalk Console and all its dependencies under the `path/to/install` directory.
  
 ### setup host and port :
   for set up you should go to ```config.php``` in root directory :
