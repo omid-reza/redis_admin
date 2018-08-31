@@ -1,6 +1,6 @@
 {
     "name": "snip77/redis-console",
-    "description": ,
+    "description": "Manage Redis server keys (show-edit-delete-search)",
     "require": {
         "php": "^5.3.3 || ^7.0"
     },
