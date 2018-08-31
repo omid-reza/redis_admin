@@ -2,7 +2,8 @@
     "name": "snip77/redis-console",
     "description": "Manage Redis server keys (show-edit-delete-search)",
     "require": {
-        "php": "^5.3.3 || ^7.0"
+        "php": "^5.3.3 || ^7.0",
+        "predis/predis": "1.1.1"
     },
     "license": "MIT",
     "authors": [
