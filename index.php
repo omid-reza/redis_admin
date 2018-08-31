@@ -6,6 +6,7 @@
         body{ background-image: linear-gradient(to left,#FC5252,#F237FE) }
     </style>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <script type="text/javascript" src="assets/vue.js"></script>
 </head>
 <body>
 	<?php
@@ -21,6 +22,9 @@
             </div>
         <?php }else{ ?>
             <div class="container jumbotron" style="margin-top: 100px">
+                <div style="display:flex;justify-content: space-around;">
+                    <a href="../searchForm.php"  style="margin-bottom: 1%;float: right;margin-left: 93%" class="btn btn-primary">Search</a>
+                </div>    
                 <div class="alert alert-primary" role="alert" style="">
                         <?php echo $config->getHost().':'.$config->getPort() ?>
                         <div style="float: right;"><?php echo $client->dbsize()." Key" ?></div>

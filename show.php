@@ -22,7 +22,7 @@
         <?php }else if( ! isset($_GET['key'])){ ?>
             <div class="container jumbotron" style="margin-top: 100px">
                 <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
-                <a style="float: right;" href="../" class="btn btn-warning">Back</a>
+                <a style="float: right;" href="../" class="btn btn-warning">Main page</a>
                 <div class="alert alert-danger" role="alert">
                   please set key in header ! ! !
                 </div>
@@ -30,7 +30,7 @@
 		<?php }else if(is_null($client->get($_GET['key']))){ ?>
 			<div class="container jumbotron" style="margin-top: 100px">
                 <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
-                <a style="float: right;" href="../" class="btn btn-warning">Back</a>
+                <a style="float: right;" href="../" class="btn btn-warning">Main page</a>
                 <div class="alert alert-danger" role="alert">
                   No record with key <?php echo $_GET['key']; ?>
                 </div>
@@ -40,7 +40,7 @@
             	<div class="card text-white bg-dark mb-3" >
 				  <div class="card-header">
                     Key : <?php echo $_GET['key']; ?>
-                    <a style="float: right;" href="../" class="btn btn-warning">Back</a>  
+                    <a style="float: right;" href="../" class="btn btn-warning">Main page</a>  
                     <a style="float: right; margin-right: 3%" href="../delete.php?key=<?php echo $_GET['key']; ?>" class="btn btn-danger">Delete</a>
                     <a style="float: right; margin-right: 3%" href="../editForm.php?key=<?php echo $_GET['key']; ?>" class="btn btn-light">Edit</a> 
                   </div>
