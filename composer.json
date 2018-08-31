@@ -4,6 +4,14 @@
     "require": {
         "php": "^5.3.3 || ^7.0"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "omid reza heidari",
+            "email": "omid.rez.heidari.orh@gmail.com",
+            "homepage": "https://github.com/snip77",
+            "role": "Developer"
+        },
+    ]
 }
 
