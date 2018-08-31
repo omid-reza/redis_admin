@@ -2,7 +2,7 @@
     "name": "snip77/redis-console",
     "description": ,
     "require": {
-        "php": "^5.3.3 || ^7.0",
+        "php": "^5.3.3 || ^7.0"
     },
 }
 
