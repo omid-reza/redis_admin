@@ -4,10 +4,23 @@ Manage Redis server keys(show-edit-delete)
 ## Features :
   - see all keys
   - see record detail
+    - types
+      - Strings
   - search for match keys
-  - edit keys(Still only strings)
+  - edit keys
+    - types
+      - string
   - delete keys
-  
+  - insert record
+    - types
+      - Strings
+      - Lists
+      - Hashs
+      - Sets
+    - set expire time
+    
+    
+
 ### requirments
 #### Redis
   
