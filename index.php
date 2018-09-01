@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>redis console</title>
+    <title>redis console</title>
     <style type="text/css">
         body{ background-image: linear-gradient(to left,#FC5252,#F237FE) }
     </style>
@@ -9,7 +9,22 @@
     <script type="text/javascript" src="assets/vue.js"></script>
 </head>
 <body>
-	<?php
+    <?php
+    if (isset($_GET['error'])) {?>
+        <div class="alert alert-danger" role="alert">
+              <?php echo $_GET['error']; ?>
+        </div>
+    <?php } ?>
+
+    <?php
+    if (isset($_GET['message'])) {?>
+        <div class="alert alert-success" role="alert">
+              <?php echo $_GET['message']; ?>
+        </div>
+    <?php } ?>
+    
+
+    <?php
         require 'config.php';
         $config=new Config();
         $client=$config->connect();
@@ -23,7 +38,10 @@
         <?php }else{ ?>
             <div class="container jumbotron" style="margin-top: 100px">
                 <div style="display:flex;justify-content: space-around;">
-                    <a href="../searchForm.php"  style="margin-bottom: 1%;float: right;margin-left: 93%" class="btn btn-primary">Search</a>
+                    <div style="display: flex;width: 100%;justify-content: space-between;">
+                        <a href="../insertForm.php" style="margin-bottom: 1%"  class="btn btn-success">Insert</a>
+                    <a href="../searchForm.php"  style="margin-bottom: 1%" class="btn btn-primary">Search</a>
+                    </div>
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
                         <?php echo $config->getHost().':'.$config->getPort() ?>
