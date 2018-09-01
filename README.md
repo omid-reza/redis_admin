@@ -1,5 +1,5 @@
 # redis-console
-Manage Redis server keys(show-edit-delete)
+Manage Redis server keys
 
 ## Features :
   - see all keys
