@@ -21,7 +21,7 @@
 		<?php }else if(is_null($client->get($_GET['key']))){ ?>
 			<div class="container jumbotron PartOne">
                 <span class="PartTwo btn btn-outline-danger">errors</span>
-                <a style="float: right;" href="../" class="btn btn-warning">Back</a>
+                <a href="../" class="btn btn-warning PartThree">Back</a>
                 <div class="alert alert-danger" role="alert">
                   No record with key <?php echo $_GET['key']; ?>
                 </div>
