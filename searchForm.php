@@ -13,7 +13,7 @@
         <form action="../searchResualt.php" method="get">
           <div class="card-header">
             Search
-            <a style="float: right" href="../" class="btn btn-warning">Back</a>
+            <a style="float: right" href="../" class="btn btn-warning">Main Page</a>
           </div>
           <div class="form-group row" style="margin-top: 2%">
             <label for="key" class="col-sm-2 col-form-label">Key to search</label>
