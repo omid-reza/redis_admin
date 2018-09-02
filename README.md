@@ -68,6 +68,6 @@ Manage Redis server keys
 ```
   - Visit `localhost:8000` in your browser
   
-## Note :
-
-  For use you need to start Your `redis server`
+## requirments for use :
+  
+  - runs redis server
