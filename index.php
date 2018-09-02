@@ -2,9 +2,7 @@
 <html>
 <head>
     <title>redis console</title>
-    <style type="text/css">
-        body{ background-image: linear-gradient(to left,#FC5252,#F237FE) }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
     <script type="text/javascript" src="assets/vue.js"></script>
 </head>
@@ -29,31 +27,31 @@
         $config=new Config();
         $client=$config->connect();
         if (is_string($client)) { ?>
-            <div class="container jumbotron" style="margin-top: 100px">
-                <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
+            <div class="container jumbotron PartTwo">
+                <span class="btn btn-outline-danger PartOne">errors</span>
                 <div class="alert alert-danger" role="alert">
                   <?php echo $client ?>
                 </div>
             </div>
         <?php }else{ ?>
-            <div class="container jumbotron" style="margin-top: 100px">
-                <div style="display:flex;justify-content: space-around;">
-                    <div style="display: flex;width: 100%;justify-content: space-between;">
-                        <a href="../insertForm.php" style="margin-bottom: 1%"  class="btn btn-success">Insert</a>
-                    <a href="../searchForm.php"  style="margin-bottom: 1%" class="btn btn-primary">Search</a>
+            <div class="container jumbotron PartTwo">
+                <div class="PartThree">
+                    <div class="PartFour">
+                        <a href="../insertForm.php" class="btn btn-success PartFive">Insert</a>
+                    <a href="../searchForm.php" class="btn btn-primary PartFive">Search</a>
                     </div>
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
                         <?php echo $config->getHost().':'.$config->getPort() ?>
                         <div style="float: right;"><?php echo $client->dbsize()." Key" ?></div>
                 </div>
-                <div class="alert alert-dark" role="alert" style="text-align:center;">
+                <div class="alert alert-dark PartSix" role="alert">
                         keys
                 </div>
             <?php
             foreach ($client->keys('*') as $key => $value) {  ?>
-                <a href="show.php?key=<?php echo $value?>" style="text-decoration: none;">
-                    <div class="alert alert-success" role="alert" style="text-align:center;">
+                <a class="PartSeven" href="show.php?key=<?php echo $value?>">
+                    <div class="alert alert-success PartSix" role="alert">
                             <?php echo $value ?>
                     </div>
                 </a>
