@@ -49,36 +49,6 @@
       </div>
     </div>
     <script src="assets/vue.js"></script>
-    <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          key : "",
-          valuecount:1,
-          addedExpire:0,
-          expireIn:null,
-          type: "",
-          expireKeyText:"Add Expire Time",
-        },
-        methods:{
-            addValue(){
-               this.valuecount++;
-            },
-            addExpire(){
-              if(this.addedExpire){
-                this.addedExpire=false;
-                this.expireKeyText="Add Expire Time";
-                return;
-              }
-              this.addedExpire=true;
-              this.expireKeyText="Remove Expire Time";    
-            },
-            typeChange(){
-              if(this.type == 'String')
-                this.valuecount=1;
-            }
-        }
-      })
-    </script>
+    <script src="assets/vue/insertForm.js"></script>
 </body>
 </html>
