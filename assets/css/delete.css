@@ -1,0 +1,14 @@
+ body{
+  background-image: linear-gradient(to left,#FC5252,#F237FE);
+}
+.PartOne{
+	margin-top: 100px;
+}
+.PartTwo{
+	height: 50px;width: 150px;
+	font-size: 20px;
+	margin-bottom:10px;
+}
+.PartThree{
+	float: right;
+}
