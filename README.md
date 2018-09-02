@@ -1,6 +1,7 @@
 # redis-console
 Manage Redis server keys
 
+![Alt text](Cover/index.png)
 ## Features :
   - see all keys
   - see record detail
