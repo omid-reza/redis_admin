@@ -1,0 +1,28 @@
+body{ 
+	background-image: linear-gradient(to left,#FC5252,#F237FE);
+}
+.PartOne{
+	float: right;
+}
+.PArtTwo{
+	margin-top: 1%;
+}
+.PartThree{
+	margin-top: 2%;
+}
+
+.PartFour{
+	float: right;
+	margin-bottom: 2%;
+}
+.PartFive{
+	float: right;
+	margin-right: 1%;
+}
+.PartSix{
+	float: right;
+	margin-right: 1%;
+}
+.PartSeven{
+	margin-top: 20%;
+}
