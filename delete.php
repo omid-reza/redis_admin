@@ -20,7 +20,7 @@
 
 		<?php }else if(is_null($client->get($_GET['key']))){ ?>
 			<div class="container jumbotron PartOne">
-                <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
+                <span class="PartTwo btn btn-outline-danger">errors</span>
                 <a style="float: right;" href="../" class="btn btn-warning">Back</a>
                 <div class="alert alert-danger" role="alert">
                   No record with key <?php echo $_GET['key']; ?>
