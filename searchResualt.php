@@ -2,10 +2,8 @@
 <html>
 <head>
 	<title>edit - redis console</title>
-    <style type="text/css">
-        body{ background-image: linear-gradient(to left,#FC5252,#F237FE) }
-    </style>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/searchResualt.css">
 </head>
 <body>
 	<?php
@@ -13,38 +11,38 @@
         $config = new Config();
         $client = $config->connect();
         if (is_string($client)) { ?>
-            <div class="container jumbotron" style="margin-top: 100px">
-                <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
+            <div class="container jumbotron partOne">
+                <span class="btn btn-outline-danger partTwo">errors</span>
                 <div class="alert alert-danger" role="alert">
                   <?php echo $client; ?>
                 </div>
             </div>
         <?php }else if( ! isset($_GET['key'])){ ?>
-            <div class="container jumbotron" style="margin-top: 100px">
-                <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
-                <a style="float: right;" href="../" class="btn btn-warning">Back</a>
+            <div class="container jumbotron partOne">
+                <span class="btn btn-outline-danger partTwo">errors</span>
+                <a href="../" class="btn btn-warning PartThree">Back</a>
                 <div class="alert alert-danger" role="alert">
                   please set key in header ! ! !
                 </div>
             </div>
         <?php }else{ ?>
-            <div class="container jumbotron" style="margin-top: 100px">
+            <div class="container jumbotron partOne">
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Resualt for : <?php echo $_GET['key']?>
-                  <a style="float: right;" href="../" class="btn btn-warning">Main Page</a>
+                  <a href="../" class="btn btn-warning PartThree">Main Page</a>
                   </div>
                   <?php
                   if (count($client->keys('*'.$_GET['key'].'*'), 1) == 0) { ?>
-                    <a href="show.php?key=<?php echo $value?>" style="text-decoration: none;">
-                        <div class="alert alert-warning" role="alert" style="text-align:center;">
+                    <a href="show.php?key=<?php echo $value?>" class="partFour">
+                        <div class="alert alert-warning partFive" role="alert">
                             No math resualt !!
                         </div>
                     </a>
                 <?php }else{
                     foreach ($client->keys('*'.$_GET['key'].'*') as $key => $value) {  ?>
-                            <a href="show.php?key=<?php echo $value; ?>" style="text-decoration: none;">
-                                <div class="alert alert-secondary" role="alert" style="text-align:center;">
+                            <a href="show.php?key=<?php echo $value; ?>" class="partFour">
+                                <div class="alert alert-secondary partFive" role="alert">
                                         <?php echo $value; ?>
                                 </div>
                             </a>
