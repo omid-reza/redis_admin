@@ -8,8 +8,8 @@
 <body>
 	<?php
         require 'config.php';
-        $config=new Config();
-        $client=$config->connect();
+        $config = new Config();
+        $client = $config->connect();
         if (is_string($client)) { ?>
             <div class="container jumbotron PartTwo">
                 <span id="errorsPart" class="btn btn-outline-danger">errors</span>

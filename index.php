@@ -24,8 +24,8 @@
 
     <?php
         require 'config.php';
-        $config=new Config();
-        $client=$config->connect();
+        $config = new Config();
+        $client = $config->connect();
         if (is_string($client)) { ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">errors</span>
@@ -42,17 +42,17 @@
                     </div>
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
-                        <?php echo $config->getHost().':'.$config->getPort() ?>
-                        <div  class="partEight"><?php echo $client->dbsize()." Key" ?></div>
+                        <?php echo $config->getHost() . ':' . $config->getPort(); ?>
+                        <div  class="partEight"><?php echo $client->dbsize()." Key"; ?></div>
                 </div>
                 <div class="alert alert-dark PartSix" role="alert">
                         keys
                 </div>
             <?php
             foreach ($client->keys('*') as $key => $value) {  ?>
-                <a class="PartSeven" href="show.php?key=<?php echo $value?>">
+                <a class="PartSeven" href="show.php?key=<?php echo $value; ?>">
                     <div class="alert alert-success PartSix" role="alert">
-                            <?php echo $value ?>
+                            <?php echo $value; ?>
                     </div>
                 </a>
         <?php } } ?>

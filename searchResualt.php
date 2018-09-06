@@ -10,13 +10,13 @@
 <body>
 	<?php
         require 'config.php';
-        $config=new Config();
-        $client=$config->connect();
+        $config = new Config();
+        $client = $config->connect();
         if (is_string($client)) { ?>
             <div class="container jumbotron" style="margin-top: 100px">
                 <span style="height: 50px;width: 150px;font-size: 20px; margin-bottom:10px " class="btn btn-outline-danger">errors</span>
                 <div class="alert alert-danger" role="alert">
-                  <?php echo $client ?>
+                  <?php echo $client; ?>
                 </div>
             </div>
         <?php }else if( ! isset($_GET['key'])){ ?>
@@ -43,9 +43,9 @@
                     </a>
                 <?php }else{
                     foreach ($client->keys('*'.$_GET['key'].'*') as $key => $value) {  ?>
-                            <a href="show.php?key=<?php echo $value?>" style="text-decoration: none;">
+                            <a href="show.php?key=<?php echo $value; ?>" style="text-decoration: none;">
                                 <div class="alert alert-secondary" role="alert" style="text-align:center;">
-                                        <?php echo $value ?>
+                                        <?php echo $value; ?>
                                 </div>
                             </a>
                     <?php } } ?>
