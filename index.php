@@ -43,7 +43,7 @@
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
                         <?php echo $config->getHost().':'.$config->getPort() ?>
-                        <div style="float: right;"><?php echo $client->dbsize()." Key" ?></div>
+                        <div  class="partEight"><?php echo $client->dbsize()." Key" ?></div>
                 </div>
                 <div class="alert alert-dark PartSix" role="alert">
                         keys

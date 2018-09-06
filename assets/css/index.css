@@ -30,3 +30,7 @@ body{
 .PartSeven{
 	text-decoration: none;
 }
+
+.partEight{
+	float: right;
+}
