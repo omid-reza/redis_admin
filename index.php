@@ -38,7 +38,7 @@
                 <div class="PartThree">
                     <div class="PartFour">
                         <a href="../insertForm.html" class="btn btn-success PartFive">Insert</a>
-                    <a href="../searchForm.php" class="btn btn-primary PartFive">Search</a>
+                    <a href="../searchForm.php" class="btn btn-primary PartFive partEight">Search</a>
                     </div>
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
