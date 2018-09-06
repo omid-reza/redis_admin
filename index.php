@@ -37,7 +37,7 @@
             <div class="container jumbotron PartTwo">
                 <div class="PartThree">
                     <div class="PartFour">
-                        <a href="../insertForm.php" class="btn btn-success PartFive">Insert</a>
+                        <a href="../insertForm.html" class="btn btn-success PartFive">Insert</a>
                     <a href="../searchForm.php" class="btn btn-primary PartFive">Search</a>
                     </div>
                 </div>    
