@@ -23,6 +23,7 @@ Manage Redis server keys
       - Lists
       - Hashs
       - Sets
+      - sorted lists
     - set expire time
     
     
