@@ -72,7 +72,7 @@ Manage Redis server keys
 ```php
     php artisan
 ```
-  - Visit `localhost:8000` in your browser
+  - Visit `localhost:2100` in your browser
   
 ## requirments for use :
   
