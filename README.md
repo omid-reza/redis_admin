@@ -70,7 +70,7 @@ Manage Redis server keys
   - run this command in main directory
     
 ```php
-    Php -S localhost:8000
+    php artisan
 ```
   - Visit `localhost:8000` in your browser
   
