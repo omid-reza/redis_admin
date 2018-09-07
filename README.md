@@ -18,7 +18,7 @@ Manage Redis server keys
       - string
   - delete keys
   - insert record
-    - types
+    - types  availble 
       - Strings
       - Lists
       - Hashs
