@@ -66,13 +66,30 @@ Manage Redis server keys
 ```
 
 ### Use :
-
+  #### use default port:
+  Default port for app is `2000`
   - run this command in main directory
     
 ```php
     php artisan
-```
-  - Visit `localhost:2100` in your browser
+```  
+
+  - Visit `localhost:2000` in your browser
+  
+  #### set option port:
+   You can set port like this:
+```php
+php artisan PORT_NUMBER
+``` 
+  - Visit `localhost:PORT_NUMBER` in your browser
+  
+  For example 
+ 
+ ```php
+php artisan 2010
+``` 
+  - Visit `localhost:2010` in your browser
+  
   
 ## requirments for use :
   
