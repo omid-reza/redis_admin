@@ -48,7 +48,35 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 			else
 				header('location:../index.php?error=nuknow');
 			break;
+		case 'Set':
+			$key = $_POST['key'];
+			$value = $_POST['value'];
+			require 'op/SetType.php';
+			if (isset($_POST['expire'])) {
+				$res = SetType::insert($key, $value, $_POST['expire']);
+			}else{
+				$res = SetType::insert($key,$value);
+			}
+			if ($res == true)
+				header('location:../index.php?message=created');
+			else
+				header('location:../index.php?error=nuknow');
+			break;
+		case 'Sorted List':
+			$key = $_POST['key'];
+			$value = $_POST['value'];
+			require 'op/SortedListType.php';
+			if (isset($_POST['expire'])) {
+				$res = SortedListType::insert($key, $value, $_POST['expire']);
+			}else{
+				$res = SortedListType::insert($key,$value);
+			}
+			if ($res == true)
+				header('location:../index.php?message=created');
+			else
+				header('location:../index.php?error=nuknow');
+			break;
 	}
 }else{
-	header('location:../index.php?error=param mis');
+	header('location:../index.php?error=paramiter mising');
 }

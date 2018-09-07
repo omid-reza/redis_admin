@@ -62,7 +62,7 @@ class Config
     		case 'zset':
     			return $this->client->ZRANGEBYSCORE ($key, 0, 4294967295);
     		default:
-    			return 'UNAVAILBLE TYPE !';
+    			return null;
     	}
     }
 }

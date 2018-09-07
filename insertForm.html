@@ -18,8 +18,9 @@
             <select name="type" class="form-control" id="Type" v-model="type" @change="typeChange()">
               <option>String</option>
               <option>Hashe</option>
-              <option>List</option>
               <option>Set</option>
+              <option>List</option>
+              <option>Sorted List</option>
             </select>
           </div>
           <div class="form-group row PartThree" v-if="type != '' && addedExpire == true">
