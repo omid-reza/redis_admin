@@ -5,8 +5,12 @@ Manage Redis server keys
 ## Features :
   - see all keys
   - see record detail
-    - types
+    - types availble
       - Strings
+      - lists
+      - sorted lists
+      - sets
+      - hashs
   - search for match keys
   - edit keys
     - types
