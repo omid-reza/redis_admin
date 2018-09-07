@@ -28,7 +28,7 @@ Manage Redis server keys
     
     
 
-### requirments
+## Requirments
 #### Redis
   
       Install redis from https://redis.io/download for you os
@@ -66,7 +66,7 @@ Manage Redis server keys
         private $port=6379;
 ```
 
-### Use :
+## Use :
   #### use default port:
   Default port for app is `2000`
   - run this command in main directory
