@@ -37,14 +37,20 @@
             <div class="container PartTwo">
             	<div class="card text-white bg-dark mb-3" >
 				  <div class="card-header">
-                    Key : <?php echo $_GET['key']; ?>
+                    Type : <?php echo $client->type($_GET['key']); ?>
                     <a href="../" class="btn btn-warning PartThree">Main page</a>  
                     <a href="../delete.php?key=<?php echo $_GET['key']; ?>" class="btn btn-danger PartFour">Delete</a>
                     <a href="../editForm.php?key=<?php echo $_GET['key']; ?>" class="btn btn-light PartFour">Edit</a> 
                   </div>
 				  <div class="card-body">
+                    <h5 class="card-title">Key : <?php echo $_GET['key'];?></h5>
 				    <h5 class="card-title">Value : <?php echo $client->get($_GET['key']);?></h5>
-				    <h5 class="card-text">Expired in : <?php echo $client->ttl($_GET['key']);?> second (-1 mean to time left . can be alive for ever)</h5>
+                    <br>
+                    <?php if($client->ttl($_GET['key']) > -1){?>
+				        <h5 class="card-text">Expired in : <?php echo $client->ttl($_GET['key']);?> second (-1 mean to time left . can be alive for ever)</h5>
+                    <?php }else{ ?>
+                        <h5 class="card-text">No expire time .</h5>
+                    <?php } ?>
 				  </div>
 				</div>
         <?php } ?>
