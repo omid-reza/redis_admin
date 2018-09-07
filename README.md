@@ -1,7 +1,7 @@
 # redis-console
 Manage Redis server keys
 
-![Loading . . .](Cover/index.png)
+![Loading . . .](https://www.dropbox.com/s/w0o5zoayj527ob5/Screenshot%20%2840%29.png?dl=0)
 ## Features :
   - see all keys
   - see record detail
