@@ -48,4 +48,21 @@ class Config
     {
         return $this->port;
     }
+
+    public function getValue($key){
+    	switch ($this->client->type($key)) {
+    		case 'string':
+    			return $this->client->get($key);
+    		case 'list':
+    			return $this->client->lrange($key, 0, 4294967295);
+    		case 'hash':
+    			return $this->client->HGETALL($key);
+    		case 'set':
+    			return $this->client->smembers($key);
+    		case 'zset':
+    			return $this->client->ZRANGEBYSCORE ($key, 0, 4294967295);
+    		default:
+    			return 'UNAVAILBLE TYPE !';
+    	}
+    }
 }

@@ -25,7 +25,7 @@
                   please set key in header ! ! !
                 </div>
             </div>
-		<?php }else if(is_null($client->get($_GET['key']))){ ?>
+		<?php }else if(is_null($config->getValue($_GET['key']))){ ?>
 			<div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">errors</span>
                 <a class="PartThree" href="../" class="btn btn-warning">Main page</a>
@@ -44,7 +44,13 @@
                   </div>
 				  <div class="card-body">
                     <h5 class="card-title">Key : <?php echo $_GET['key'];?></h5>
-				    <h5 class="card-title">Value : <?php echo $client->get($_GET['key']);?></h5>
+                    <br>
+                    <h5 class="card-title">Value(s) :</h5>
+                    <?php $counter=0 ?>
+                    <?php foreach ((array)$config->getValue($_GET['key']) as $k => $val) {
+                        $counter++;?>
+                        <h5 class="card-title container"><?php echo (string)($counter).' ) '.$val; ?></h5>
+                    <?php } ?>
                     <br>
                     <?php if($client->ttl($_GET['key']) > -1){?>
 				        <h5 class="card-text">Expired in : <?php echo $client->ttl($_GET['key']);?> second (-1 mean to time left . can be alive for ever)</h5>
