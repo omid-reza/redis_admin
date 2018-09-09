@@ -1,0 +1,6 @@
+{
+	private:true,
+	"Dependencies": {
+        "predis":"^1.1.0"
+    }
+}
