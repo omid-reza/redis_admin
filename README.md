@@ -33,8 +33,6 @@ Manage Redis server keys
   
       Install redis from https://redis.io/download for you os
  #### Php
-  
-      You should have php for start server
 
 
 ## Installation :
