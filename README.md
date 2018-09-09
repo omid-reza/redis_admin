@@ -54,7 +54,7 @@ Manage Redis server keys
  #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
  
 ### setup host and port :
-  for set up you should go to ```db.yaml``` in root directory :
+  for set up you should go to ```db.yaml``` in  config directory :
   
 ##### host : change host value to your host(default is localhost) :
 
