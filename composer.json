@@ -1,6 +1,6 @@
 {
     "name": "redis-console/redis-console",
-    "description": "Manage Redis server keys (show-edit-delete-search)",
+    "description": "Manage Redis server keys (show-delete-search-insert-edit)",
     "keywords": ["nosql", "redis", "predis"],
     "require": {
         "php": "^5.3.3 || ^7.0",
