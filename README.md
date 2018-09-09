@@ -48,7 +48,7 @@ Manage Redis server keys
   Then, use the `create-project` command to generate a new application:
   
  ```
-    composer create-project snip77/redis-console -s dev path/to/install
+    composer create-project redis-console/redis-console -s dev path/to/install
  ```
  
  #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
