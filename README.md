@@ -50,7 +50,7 @@ Manage Redis server keys
  ```php
     composer create-project snip77/redis-console -s dev path/to/install
  ```
- #### Composer will install the Beanstalk Console and all its dependencies under the `path/to/install` directory.
+ #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory.
  
 ### setup host and port :
   for set up you should go to ```config.php``` in root directory :
