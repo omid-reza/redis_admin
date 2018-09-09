@@ -20,12 +20,12 @@ class Config
 	}
 	public function connect()
 	{
-		if(is_string($this->host) and is_int($this->port)) {
+		if(is_string($this->getHost()) and is_int($this->getPort())) {
 			try{
 				$this->client = new Predis\Client([
 				    'scheme' => 'tcp',
-				    'host'   => $this->host,
-				    'port'   => $this->port,
+				    'host'   => $this->getHost(),
+				    'port'   => $this->getPort(),
 				]);
 				return $this->client;
 			}catch (Exception $e){
