@@ -7,8 +7,8 @@ class ListType
 {
 	
 	public static function insert($key, $value, $expire=null){
-		require 'config.php';
-		$config=new Config();
+		require 'vendor/autoload.php';
+        $config = new Config();
 		$client = $config->connect();
 		
 		if (is_string($client))

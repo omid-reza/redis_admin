@@ -7,8 +7,8 @@
 </head>
 <body>
 	<?php
-        require 'config.php';
-        $config=new Config();
+        require 'vendor/autoload.php';
+        $config = new Config();
         $client=$config->connect();
         if (is_string($client)) { ?>
             <div class="container jumbotron PartOne">

@@ -3,7 +3,8 @@
     "description": "Manage Redis server keys (show-edit-delete-search)",
     "keywords": ["nosql", "redis", "predis"],
     "require": {
-        "php": "^5.3.3 || ^7.0"
+        "php": "^5.3.3 || ^7.0",
+        "predis/predis": "*"
     },
     "license": "MIT",
     "authors": [
@@ -13,6 +14,9 @@
             "homepage": "https://github.com/snip77",
             "role": "Developer"
         }
-    ]
+    ],
+    "autoload":{
+        "files": ["config/config.php"]
+    }
 }
 
