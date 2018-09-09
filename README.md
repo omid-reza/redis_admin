@@ -54,17 +54,18 @@ Manage Redis server keys
  #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
  
 ### setup host and port :
-  for set up you should go to ```config.php``` in root directory :
+  for set up you should go to ```db.yaml``` in root directory :
   
-##### host : change host variable value to your host(default is localhost) :
-```php
-        private $host='localhost'; 
+##### host : change host value to your host(default is localhost) :
+
+```yaml
+        - host : localhost
 ```
       
-####  port  : change port variable value to your redis port inyour host(default port for redis is 6379)
+####  port  : change port value to your redis port in your host(default port for redis is 6379)
 
-```php
-        private $port=6379;
+```yaml
+          port : 6379
 ```
 
 ## Use :
