@@ -43,16 +43,14 @@ Manage Redis server keys
 ```php
     curl -s http://getcomposer.org/installer | php 
 ```
-  Then, clone project like :
+
+  Then, use the `create-project` command to generate a new application:
   
  ```
-    git clone https://github.com/snip77/redis-console.git
+    composer create-project snip77/redis-console -s dev path/to/install
  ```
- #### Then you need to install require packages run just this command :
  
- ```php
-    composer install
- ```
+ #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
  
 ### setup host and port :
   for set up you should go to ```config.php``` in root directory :
