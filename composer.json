@@ -4,7 +4,8 @@
     "keywords": ["nosql", "redis", "predis"],
     "require": {
         "php": "^5.3.3 || ^7.0",
-        "predis/predis": "^1.1.0"
+        "predis/predis": "^1.1.0",
+        "symfony/yaml":"*"
     },
     "license": "MIT",
     "support": {

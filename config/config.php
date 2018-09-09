@@ -3,6 +3,8 @@
 
 require 'vendor/autoload.php';
 use Predis\Autoloader;
+use Symfony\Component\Yaml\Yaml;
+
 
 /**
  * @author Omid Reza
@@ -10,8 +12,6 @@ use Predis\Autoloader;
 class Config
 {
 	private $client=Null;
-	private $host='localhost';
-	private $port=6379; # defualt port for redis is 6379
 	
 	public function __construct()
 	{
@@ -41,7 +41,7 @@ class Config
      */
     public function getHost()
     {
-        return $this->host;
+        return Yaml::parseFile('config/db.yaml')[0]['host'];;
     }
 
     /**
@@ -49,7 +49,7 @@ class Config
      */
     public function getPort()
     {
-        return $this->port;
+        return Yaml::parseFile('config/db.yaml')[0]['port'];
     }
 
     public function getValue($key){
