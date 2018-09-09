@@ -30,9 +30,10 @@ Manage Redis server keys
 
 ## Requirments
 #### Redis
-  
-      Install redis from https://redis.io/download for you os
+  Install redis from https://redis.io/download for your os
+      
  #### Php
+  Install from http://php.net/downloads.php
 
 
 ## Installation :
