@@ -1,12 +1,15 @@
 <?php
 
+namespace Operator;
+require 'vendor/autoload.php';
+use config\Config;
+
 /**
  * @author omid reza heidari
  */
 class SetType
 {
 	public static function insert($key, $value, $expire=null){
-		require 'vendor/autoload.php';
         $config = new Config();
 		$client = $config->connect();
 		

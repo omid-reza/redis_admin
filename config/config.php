@@ -1,9 +1,10 @@
 <?php
 
-
+namespace config;
 require 'vendor/autoload.php';
 use Predis\Autoloader;
 use Symfony\Component\Yaml\Yaml;
+use Predis;
 
 
 /**

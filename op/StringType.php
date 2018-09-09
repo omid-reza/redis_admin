@@ -1,4 +1,10 @@
 <?php
+
+namespace Operator;
+require 'vendor/autoload.php';
+use config\Config;
+
+
 /**
  * @author omid reza heidari
  */

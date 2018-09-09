@@ -8,6 +8,7 @@
 <body>
     <?php
         require 'vendor/autoload.php';
+        use config\Config;
         $config = new Config();
         $client=$config->connect();
         if (is_string($client)) { ?>

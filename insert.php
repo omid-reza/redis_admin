@@ -1,5 +1,12 @@
 <?php
 
+require 'vendor/autoload.php';
+use Operator\HashType;
+use Operator\StringType;
+use Operator\ListType;
+use Operator\SetType;
+use Operator\SortedListType;
+
 if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) {
 	$key = null;
 	$value = null;
@@ -7,7 +14,6 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 		case 'String':
 			$key = $_POST['key'];
 			$value = $_POST['value'][0];
-			require 'op/StringType.php';
 			if (isset($_POST['expire'])) {
 				$res = (StringType::insert($key, $value, $_POST['expire']));
 			}else{
@@ -22,7 +28,6 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 		case 'Hashe':
 			$key = $_POST['key'];
 			$value = $_POST['value'];
-			require 'op/HashType.php';
 			if (isset($_POST['expire'])) {
 				$res = HashType::insert($key, $value, $_POST['expire']);
 			}else{
@@ -37,7 +42,6 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 		case 'List':
 			$key = $_POST['key'];
 			$value = $_POST['value'];
-			require 'op/ListType.php';
 			if (isset($_POST['expire'])) {
 				$res = ListType::insert($key, $value, $_POST['expire']);
 			}else{
@@ -51,7 +55,6 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 		case 'Set':
 			$key = $_POST['key'];
 			$value = $_POST['value'];
-			require 'op/SetType.php';
 			if (isset($_POST['expire'])) {
 				$res = SetType::insert($key, $value, $_POST['expire']);
 			}else{
@@ -65,7 +68,6 @@ if (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value']) ) 
 		case 'Sorted List':
 			$key = $_POST['key'];
 			$value = $_POST['value'];
-			require 'op/SortedListType.php';
 			if (isset($_POST['expire'])) {
 				$res = SortedListType::insert($key, $value, $_POST['expire']);
 			}else{
