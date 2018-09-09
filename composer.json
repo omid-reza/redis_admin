@@ -1,5 +1,5 @@
 {
-    "name": "snip77/redis-console",
+    "name": "redis-console/redis-console",
     "description": "Manage Redis server keys (show-edit-delete-search)",
     "keywords": ["nosql", "redis", "predis"],
     "require": {
@@ -7,6 +7,9 @@
         "predis/predis": "^1.1.0"
     },
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/snip77/redis-console/issues"
+    },
     "authors": [
         {
             "name": "omid reza heidari",
