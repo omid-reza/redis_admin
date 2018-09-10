@@ -1,7 +1,9 @@
 language: php
 sudo: false
-services: redis-server
+services:
+  - redis-server
 before_script:
+  - php artisan
   - composer self-update
   - composer install --no-interaction --prefer-source --dev
 matrix:
