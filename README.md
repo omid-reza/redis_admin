@@ -1,7 +1,8 @@
 # redis-console
 Manage Redis server keys
 
-![Loading . . .](Cover/index.png)
+### server list page :
+![Loading . . .](cover/server_list.png)
 
 ## Features :
   - see all keys
