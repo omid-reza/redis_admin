@@ -7,6 +7,7 @@ use config\Config;
 /**
  * @author omid reza heidari
  */
+
 class SetType
 {
 	public static function insert($key, $value, $expire=null){

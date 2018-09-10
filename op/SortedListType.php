@@ -21,9 +21,8 @@ class SortedListType
 			$client->zadd($key, 0, $val);
 		}
 
-		if (is_null($expire)==false){
+		if (is_null($expire)==false)
 			$client->expire($key,$expire);
-		}
 
 		return true;
 	}

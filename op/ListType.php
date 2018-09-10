@@ -22,9 +22,8 @@ class ListType
 			$client->lpush($key, $val);
 		}
 
-		if (is_null($expire)==false){
+		if (is_null($expire)==false)
 			$client->expire($key,$expire);
-		}
 
 		return true;
 	}
