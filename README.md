@@ -1,7 +1,15 @@
-# redis-console
-[![License](https://poser.pugx.org/redis-console/redis-console/license)](https://packagist.org/packages/redis-console/redis-console)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg)](https://php.net/)
-[![Minimum redis version](https://img.shields.io/badge/redis-%3E%3D%201.0.0-FC5252.svg)](https://http://redis.io/)
+<h1 align="center" >redis console</h1>
+<p align="center">
+    <a href="LICENSE" target="_blank">
+        <img alt="Software License" src="https://poser.pugx.org/redis-console/redis-console/license">
+    </a>
+    <a href="https://php.net/" target="_blank">
+        <img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg">
+    </a>
+    <a href="https://http://redis.io/" target="_blank">
+        <img alt="Minimum redis version" src="https://img.shields.io/badge/redis-%3E%3D%201.0.0-FC5252.svg">
+    </a>
+</p>
 
 ### server list page :
 ![Loading . . .](cover/server_list.png)
