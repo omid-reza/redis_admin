@@ -56,18 +56,6 @@ Manage Redis server keys
 ### setup host and port :
   for set up you should go to ```db.yaml``` in  config directory :
   
-##### host : change host value to your host(default is localhost) :
-
-```yaml
-        - host : localhost
-```
-      
-####  port  : change port value to your redis port in your host(default port for redis is 6379)
-
-```yaml
-          port : 6379
-```
-
 ## Use :
   #### use default port:
   Default port for app is `2000`
