@@ -1,5 +1,5 @@
 # redis-console
-Manage Redis server keys
+[![License](https://poser.pugx.org/redis-console/redis-console/license)](https://packagist.org/packages/redis-console/redis-console)
 
 ### server list page :
 ![Loading . . .](cover/server_list.png)
