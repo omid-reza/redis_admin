@@ -4,8 +4,7 @@ namespace config;
 require 'vendor/autoload.php';
 use Predis\Autoloader;
 use Symfony\Component\Yaml\Yaml;
-use Predis;
-
+use Predis\Client;
 
 /**
  * @author Omid Reza
@@ -22,16 +21,11 @@ class Config
 	public function connect()
 	{
 		if(is_string($this->getHost()) and is_int($this->getPort())) {
-			try{
-				$this->client = new Predis\Client([
-				    'scheme' => 'tcp',
-				    'host'   => $this->getHost(),
-				    'port'   => $this->getPort(),
-				]);
-				return $this->client;
-			}catch (Exception $e){
-				return 'server is unavailble';
-			}
+            return $this->client = new Client([
+                'scheme' => 'tcp',
+                'host'   => $this->getHost(),
+                'port'   => $this->getPort(),
+            ]);
 		}
 		return 'host or port not set';
 	}

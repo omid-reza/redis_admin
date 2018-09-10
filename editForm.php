@@ -10,7 +10,7 @@
         require 'vendor/autoload.php';
         use config\Config;
         $config = new Config();
-        $client=$config->connect();
+        $client = $config->connect();
         if (is_string($client)) { ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
