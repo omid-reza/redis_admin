@@ -7,6 +7,9 @@
         "predis/predis": "^1.1.0",
         "symfony/yaml":"^4.0.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8"
+    },
     "license": "MIT",
     "support": {
         "issues": "https://github.com/snip77/redis-console/issues"
