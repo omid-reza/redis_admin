@@ -3,10 +3,5 @@ sudo: false
 services:
   - redis-server
 before_script:
-  - php artisan
   - composer self-update
   - composer install --no-interaction --prefer-source --dev
-matrix:
-  include:
-    - php: hhvm
-dist: trusty
