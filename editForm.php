@@ -10,8 +10,15 @@
         require 'vendor/autoload.php';
         use config\Config;
         $config = new Config();
-        $client = $config->connect();
-        if (is_string($client)) { ?>
+        if( ! isset($_GET['server'])){ ?>
+            <div class="container jumbotron">
+                <span class="btn btn-outline-danger">Errors</span>
+                <div class="alert alert-danger" role="alert">
+                Please set server_id in header !
+            </div>
+                  
+            </div>
+        <?php }elseif (is_string($client = $config->connect($_GET['server']))) { ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
                 <div class="alert alert-danger" role="alert">
@@ -42,6 +49,7 @@
                       <div class="form-group row PartFour">
                         <label for="key" class="col-sm-2 col-form-label">Key</label>
                         <div class="col-sm-10">
+                          <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
                           <input type="text" class="form-control" name="key" id="key" value="<?php echo $_GET['key']; ?>">
                         </div>
                       </div>

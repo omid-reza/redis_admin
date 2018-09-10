@@ -22,9 +22,8 @@
     "autoload": {
         "psr-4": {
             "Operator\\": "op/",
-            "config\\": "config/"
+            "config\\": "config/",
         },
         "files": ["config/config.php"]
     }
 }
-

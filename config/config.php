@@ -14,17 +14,17 @@ class Config
 	private $client=Null;
 	
 	public function __construct()
-	{
-        		
+	{	
 		Autoloader::register();
 	}
-	public function connect()
+    
+	public function connect($server_id)
 	{
-		if(is_string($this->getHost()) and is_int($this->getPort())) {
+		if(is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
             return $this->client = new Client([
                 'scheme' => 'tcp',
-                'host'   => $this->getHost(),
-                'port'   => $this->getPort(),
+                'host'   => $this->getHost($server_id),
+                'port'   => $this->getPort($server_id),
             ]);
 		}
 		return 'host or port not set';
@@ -34,17 +34,17 @@ class Config
     /**
      * @return mixed
      */
-    public function getHost()
+    public function getHost($server_id):string
     {
-        return Yaml::parseFile('config/db.yaml')[0]['host'];;
+        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];;
     }
 
     /**
      * @return mixed
      */
-    public function getPort()
+    public function getPort($server_id):int
     {
-        return Yaml::parseFile('config/db.yaml')[0]['port'];
+        return Yaml::parseFile('config/db.yaml')[$server_id]['port'];
     }
 
     public function getValue($key){

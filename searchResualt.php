@@ -9,12 +9,19 @@
 	<?php
         require 'vendor/autoload.php';
         use config\Config;
-        $client = $config->connect();
-        if (is_string($client)) { ?>
-            <div class="container jumbotron partOne">
-                <span class="btn btn-outline-danger partTwo">errors</span>
+        $config=new Config;
+        if ( ! isset($_GET['server'])) { ?>
+            <div class="container jumbotron PartTwo">
+                <span class="btn btn-outline-danger PartOne">Errors</span>
                 <div class="alert alert-danger" role="alert">
-                  <?php echo $client; ?>
+                  Please set server_id in header !
+                </div>
+            </div>
+        <?php }elseif(is_string($client = $config->connect($_GET['server']))){?>
+            <div class="container jumbotron PartTwo">
+                <span class="btn btn-outline-danger PartOne">Errors</span>
+                <div class="alert alert-danger" role="alert">
+                  <?php echo $client ?>
                 </div>
             </div>
         <?php }else if( ! isset($_GET['key'])){ ?>
@@ -30,13 +37,13 @@
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Resualt for : <?php echo $_GET['key']?>
-                  <a href="../" class="btn btn-warning PartThree">Main Page</a>
+                  <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
                   </div>
                   <?php
                   if (count($client->keys('*'.$_GET['key'].'*'), 1) == 0) { ?>
                     <a href="show.php?key=<?php echo $value?>" class="partFour">
                         <div class="alert alert-warning partFive" role="alert">
-                            No math resualt !!
+                            No match resualt !!
                         </div>
                     </a>
                 <?php }else{

@@ -10,8 +10,15 @@
         require 'vendor/autoload.php';
         use config\Config;
         $config = new Config();
-        $client=$config->connect();
-        if (is_string($client)) { ?>
+        if( ! isset($_GET['server'])){ ?>
+            <div class="container jumbotron">
+                <span class="btn btn-outline-danger">Errors</span>
+                <div class="alert alert-danger" role="alert">
+                Please set server_id in header !
+            </div>
+                  
+            </div>
+        <?php }elseif (is_string($client=$config->connect($_GET['server']))) { ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">errors</span>
                 <div class="alert alert-danger" role="alert">
@@ -54,8 +61,8 @@
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Updated
-                  <a href="../" class="btn btn-warning PartThree">Main Page</a>
-                  <a href="../show.php?key=<?php echo $_GET['key']?>" class="btn btn-light PartFour">View Record</a>
+                  <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                  <a href="../show.php?key=<?php echo $_GET['key']?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">View Record</a>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">record with key <span style="color: red"><?php echo $_GET['pervios_key']; ?></span> updated</h5>

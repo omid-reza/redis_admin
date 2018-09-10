@@ -10,9 +10,10 @@ use config\Config;
 
 class SetType
 {
-	public static function insert($key, $value, $expire=null){
+	public static function insert($server_id, $key, $value, $expire=null):bool
+	{
         $config = new Config();
-		$client = $config->connect();
+		$client = $config->connect($server_id);
 		
 		if (is_string($client))
 			return false;
