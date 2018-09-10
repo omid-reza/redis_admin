@@ -14,20 +14,20 @@
     <?php } ?>
 		<div class="container partTwo" id="app">
         <div class=" container card text-white bg-dark mb-3" >
-          <form method="post" action="../save_new_server.php" @submit="checkForm">
+          <form method="post" action="../save_new_server.php">
             <div class="card-header">
               Register a new server
             </div>
             <div class="form-group row partFour">
               <label for="host" class="col-sm-2 col-form-label">Host</label>
               <div class="col-sm-10">
-                <input v-model="host" type="text"  width="100%" class="form-control" name="host">
+                <input type="text"  width="100%" class="form-control" name="host">
               </div>
             </div>
               <div class="form-group row">
               <label for="port" class="col-sm-2 col-form-label">Port</label>
               <div class="col-sm-10">
-                <input v-model="port" type="text"  width="100%" class="form-control" name="port">
+                <input type="text"  width="100%" class="form-control" name="port">
               </div>
             </div>
               <button type="submit" class="btn btn-success partOne partThree">Save</button> 
