@@ -1,5 +1,6 @@
 # redis-console
 [![License](https://poser.pugx.org/redis-console/redis-console/license)](https://packagist.org/packages/redis-console/redis-console)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg)](https://php.net/)
 
 ### server list page :
 ![Loading . . .](cover/server_list.png)
