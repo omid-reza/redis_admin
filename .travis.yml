@@ -1,1 +1,5 @@
 language: php
+services: redis-server
+before_script:
+  - composer self-update
+- composer install --no-interaction --prefer-source --dev
