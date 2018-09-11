@@ -11,3 +11,4 @@ cache:
 matrix:
   include:
     - php: hhvm
+script: vendor/bin/phpunit --debug
