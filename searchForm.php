@@ -7,14 +7,17 @@
 </head>
 <body>
     <?php
-      if ( ! isset($_GET['server'])) { ?>
+      if (!isset($_GET['server'])) {
+          ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">Errors</span>
                 <div class="alert alert-danger" role="alert">
                   Please set server_id in header !
                 </div>
             </div>
-    <?php }else{?>
+    <?php
+      } else {
+          ?>
       <div class="container partTwo">
         <div class=" container card text-white bg-dark mb-3" >
           <form action="../searchResualt.php" method="get">
@@ -33,6 +36,7 @@
           </form>
         </div>
       </div>
-    <?php }?>
+    <?php
+      }?>
 </body>
 </html>

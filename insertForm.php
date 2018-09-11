@@ -7,14 +7,17 @@
 </head>
 <body>
   <?php
-      if ( ! isset($_GET['server'])) { ?>
+      if (!isset($_GET['server'])) {
+          ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">Errors</span>
                 <div class="alert alert-danger" role="alert">
                   Please set server_id in header !
                 </div>
             </div>
-    <?php }else{?>
+    <?php
+      } else {
+          ?>
       <div class="container PartSeven" id="app">
         <div class=" container card text-white bg-dark mb-3" >
           <form method="post" action="../insert.php">
@@ -61,6 +64,7 @@
       </div>
       <script src="assets/vue.js"></script>
       <script src="assets/vue/insertForm.js"></script>
-    <?php } ?>
+    <?php
+      } ?>
 </body>
 </html>
