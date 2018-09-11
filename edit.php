@@ -66,7 +66,7 @@
                 if (!$_GET['pervios_key'] == $_GET['key']) {
                     $client->renamenx($_GET['pervios_key'], $_GET['key']);
                 }
-                $client->set($_GET['key'], $_GET['value']); ?>
+            $client->set($_GET['key'], $_GET['value']); ?>
             <div class="container PartTwo">
                 <div class="card bg-light mb-3" >
                   <div class="card-header">

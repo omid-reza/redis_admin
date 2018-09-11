@@ -12,25 +12,25 @@ use Symfony\Component\Yaml\Yaml;
  */
 class config
 {
-	private $client = null;
-	
-	public function __construct()
-	{	
-		Autoloader::register();
-	}
-    
-	public function connect($server_id)
-	{
-		if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
+    private $client = null;
+
+    public function __construct()
+    {
+        Autoloader::register();
+    }
+
+    public function connect($server_id)
+    {
+        if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
             return $this->client = new Client([
                 'scheme' => 'tcp',
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
             ]);
-		}
+		 }
 
         return 'host or port not set';
-	}
+	 }
 
 
     /**
