@@ -19,8 +19,8 @@
         </div>
     <?php }
         require 'vendor/autoload.php';
-        use config\Config;
-        $config = new Config();
+        use config\config;
+        $config = new config();
         if ( ! isset($_GET['server'])) { ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">Errors</span>

@@ -8,9 +8,10 @@
 <body>
 	<?php
         require 'vendor/autoload.php';
-        use config\Config;
-        $config = new Config();
-        if( ! isset($_GET['server'])){ ?>
+        use config\config;
+        $config = new config();
+        if (!isset($_GET['server'])) {
+            ?>
             <div class="container jumbotron">
                 <span class="btn btn-outline-danger">Errors</span>
                 <div class="alert alert-danger" role="alert">
@@ -18,7 +19,9 @@
             </div>
                   
             </div>
-        <?php }elseif (is_string($client=$config->connect($_GET['server']))) { ?>
+        <?php
+        } elseif (is_string($client = $config->connect($_GET['server']))) {
+            ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
                 <div class="alert alert-danger" role="alert">
@@ -26,7 +29,9 @@
                 </div>
             </div>
 
-		<?php }else if(is_null($config->getValue($_GET['key']))){ ?>
+		<?php
+        } elseif (is_null($config->getValue($_GET['key']))) {
+            ?>
 			<div class="container jumbotron PartOne">
                 <span class="PartTwo btn btn-outline-danger">errors</span>
                 <a href="../" class="btn btn-warning PartThree">Back</a>
@@ -51,7 +56,8 @@
 
             	
 			</div>
-        <?php } ?>
+        <?php
+        } ?>
         </div>
         
 </body>

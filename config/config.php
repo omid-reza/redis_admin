@@ -1,17 +1,18 @@
 <?php
 
 namespace config;
+
 require 'vendor/autoload.php';
+use Predis\Client;
 use Predis\Autoloader;
 use Symfony\Component\Yaml\Yaml;
-use Predis\Client;
 
 /**
  * @author Omid Reza
  */
-class Config
+class config
 {
-	private $client=Null;
+	private $client = null;
 	
 	public function __construct()
 	{	
@@ -20,13 +21,14 @@ class Config
     
 	public function connect($server_id)
 	{
-		if(is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
+		if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
             return $this->client = new Client([
                 'scheme' => 'tcp',
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
             ]);
 		}
+
 		return 'host or port not set';
 	}
 
@@ -47,20 +49,21 @@ class Config
         return Yaml::parseFile('config/db.yaml')[$server_id]['port'];
     }
 
-    public function getValue($key){
-    	switch ($this->client->type($key)) {
-    		case 'string':
-    			return $this->client->get($key);
-    		case 'list':
-    			return $this->client->lrange($key, 0, 4294967295);
-    		case 'hash':
-    			return $this->client->HGETALL($key);
-    		case 'set':
-    			return $this->client->smembers($key);
-    		case 'zset':
-    			return $this->client->ZRANGEBYSCORE ($key, 0, 4294967295);
-    		default:
-    			return null;
-    	}
+    public function getValue($key)
+    {
+        switch ($this->client->type($key)) {
+            case 'string':
+                return $this->client->get($key);
+            case 'list':
+                return $this->client->lrange($key, 0, 4294967295);
+            case 'hash':
+                return $this->client->HGETALL($key);
+            case 'set':
+                return $this->client->smembers($key);
+            case 'zset':
+                return $this->client->ZRANGEBYSCORE($key, 0, 4294967295);
+            default:
+                return;
+        }
     }
 }
