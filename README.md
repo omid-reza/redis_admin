@@ -12,9 +12,13 @@
     <a href="https://github.styleci.io/repos/146747083">
         <img src="https://github.styleci.io/repos/146747083/shield?style=plastic&branch=master" alt="StyleCi status" />
     </a>
+    <a href="https://www.codefactor.io/repository/github/snip77/redis-console">
+        <img src="https://www.codefactor.io/repository/github/snip77/redis-console/badge" />
+    </a>
+    <a href="https://bettercodehub.com/results/snip77/redis-console">
+        <img src='https://bettercodehub.com/edge/badge/snip77/redis-console?branch=master'>
+    </a>
 </p>
-
-
 
 ### server list page :
 ![Loading . . .](cover/server_list.png)
