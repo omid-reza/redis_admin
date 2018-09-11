@@ -11,7 +11,7 @@ use Predis\Client;
  */
 class Config
 {
-	private $client=Null;
+	private $client = Null;
 	
 	public function __construct()
 	{	
@@ -36,7 +36,7 @@ class Config
      */
     public function getHost($server_id):string
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];;
+        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];
     }
 
     /**
