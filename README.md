@@ -79,7 +79,7 @@
   - run this command in main directory
     
 ```php
-    php artisan
+    php serve
 ```  
 
   - Visit `localhost:2000` in your browser
@@ -87,18 +87,18 @@
   #### set option port:
    You can set port like this:
 ```php
-php artisan PORT_NUMBER
+php serve PORT_NUMBER
 ``` 
   - Visit `localhost:PORT_NUMBER` in your browser
   
   For example 
  
  ```php
-php artisan 2010
+php serve 2010
 ``` 
   - Visit `localhost:2010` in your browser
   
   
 ## requirments for use :
   
-  - runs redis server
+  - redis server
