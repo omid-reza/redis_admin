@@ -26,7 +26,7 @@ class ListType
         if (is_null($expire) == false) {
             $client->expire($key, $expire);
         }
-        
+
         return true;
     }
 }
