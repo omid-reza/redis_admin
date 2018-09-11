@@ -2,19 +2,19 @@
 	require 'vendor/autoload.php';
 	use Symfony\Component\Yaml\Yaml;
 	$servers = Yaml::parseFile('config/db.yaml');
-	if (is_null($servers)) {
+	if (is_null($servers))
 		header('location:../server_register.php');
-	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>select server - redis console</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select_server.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
 </head>
 <body>
 	<div class="container jumbotron PartTwo"> 
+		<a href="../server_register.php" class="btn btn-warning PartOne">Add Server</a>
 		<div class="alert alert-dark PartSix" role="alert">
 			servers
 		</div>

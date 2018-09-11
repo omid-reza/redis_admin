@@ -1,0 +1,18 @@
+body{
+ background-image: linear-gradient(to left,#FC5252,#F237FE);
+}
+
+.PartOne{
+	margin-bottom: 2%;
+}
+
+.PartTwo{
+	margin-top: 100px;
+}
+
+.PartSix{
+	text-align:center;
+}
+.PartSeven{
+	text-decoration: none;
+}

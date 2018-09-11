@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>kes list - redis console</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <title>Keys List - redis console</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/keys.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
     <script type="text/javascript" src="assets/vue.js"></script>
 </head>
@@ -12,16 +12,12 @@
         <div class="alert alert-danger" role="alert">
               <?php echo $_GET['error']; ?>
         </div>
-    <?php } ?>
-
-    <?php
+    <?php }
     if (isset($_GET['message'])) {?>
         <div class="alert alert-success" role="alert">
               <?php echo $_GET['message']; ?>
         </div>
-    <?php } ?>
-    
-    <?php
+    <?php }
         require 'vendor/autoload.php';
         use config\Config;
         $config = new Config();
@@ -40,13 +36,15 @@
                   <?php echo $client ?>
                 </div>
             </div>
-        <?php }else{ ?>
-            <?php $server_id=$_GET['server']; ?>
+        <?php }else{
+            $server_id=$_GET['server']; ?>
             <div class="container jumbotron PartTwo">
                 <div class="PartThree">
                     <div class="PartFour">
                         <a href="../insertForm.php?server=<?php echo $_GET['server'];?>" class="btn btn-success PartFive">Insert</a>
+                    <a href="../index.php" class="btn btn-warning PartFive partEight">server lists</a>
                     <a href="../searchForm.php?server=<?php echo $_GET['server'];?>" class="btn btn-primary PartFive partEight">Search</a>
+
                     </div>
                 </div>    
                 <div class="alert alert-primary" role="alert" style="">
