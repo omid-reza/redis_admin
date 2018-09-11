@@ -12,7 +12,11 @@ use Symfony\Component\Yaml\Yaml;
  */
 class config
 {
+<<<<<<< HEAD
 	private $client = null;
+=======
+	private $client = Null;
+>>>>>>> f8e639c40120f99fc4f54a495797c3d91425b31a
 	
 	public function __construct()
 	{	
@@ -38,7 +42,7 @@ class config
      */
     public function getHost($server_id):string
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];;
+        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];
     }
 
     /**
