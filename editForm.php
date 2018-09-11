@@ -9,8 +9,10 @@
     <?php
         require 'vendor/autoload.php';
         use config\Config;
+
         $config = new Config();
-        if( ! isset($_GET['server'])){ ?>
+        if (!isset($_GET['server'])) {
+            ?>
             <div class="container jumbotron">
                 <span class="btn btn-outline-danger">Errors</span>
                 <div class="alert alert-danger" role="alert">
@@ -18,14 +20,18 @@
             </div>
                   
             </div>
-        <?php }elseif (is_string($client = $config->connect($_GET['server']))) { ?>
+        <?php
+        } elseif (is_string($client = $config->connect($_GET['server']))) {
+            ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
                 <div class="alert alert-danger" role="alert">
                   <?php echo $client ?>
                 </div>
             </div>
-        <?php }else if( ! isset($_GET['key'])){ ?>
+        <?php
+        } elseif (!isset($_GET['key'])) {
+            ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
                 <a href="../" class="btn btn-warning PartThree">Back</a>
@@ -33,7 +39,9 @@
                   please set key in header ! ! !
                 </div>
             </div>
-        <?php }else if(is_null($client->get($_GET['key']))){ ?>
+        <?php
+        } elseif (is_null($client->get($_GET['key']))) {
+            ?>
             <div class="container jumbotron PartOne">
                 <span class="btn btn-outline-danger PartTwo">errors</span>
                 <a href="../" class="btn btn-warning PartThree">Back</a>
@@ -41,7 +49,9 @@
                   No record with key <?php echo $_GET['key']; ?>
                 </div>
             </div>
-        <?php }else{ ?>
+        <?php
+        } else {
+            ?>
             <div class="container PartOne">
                 <div class=" container card text-white bg-dark mb-3" >
                   <form action="../edit.php?key=<?php echo $_GET['key']; ?>" method="get">
@@ -62,7 +72,8 @@
                       <button type="submit" class="btn btn-primary PartFive">Save</button>
                     </form>
                 </div>
-        <?php } ?>
+        <?php
+        } ?>
         </div>
         
 </body>
