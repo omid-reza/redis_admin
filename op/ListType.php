@@ -1,6 +1,7 @@
 <?php
 
 namespace Operator;
+
 require 'vendor/autoload.php';
 use config\Config;
 
@@ -9,22 +10,24 @@ use config\Config;
  */
 class ListType
 {
-	
-	public static function insert($server_id, $key, $value, $expire=null){
-		require 'vendor/autoload.php';
+    public static function insert($server_id, $key, $value, $expire = null)
+    {
+        require 'vendor/autoload.php';
         $config = new Config();
-		$client = $config->connect($server_id);
-		
-		if (is_string($client))
-			return false;
+        $client = $config->connect($server_id);
 
-		foreach ($value as $valKey => $val){
-			$client->lpush($key, $val);
-		}
+        if (is_string($client)) {
+            return false;
+        }
 
-		if (is_null($expire)==false)
-			$client->expire($key,$expire);
+        foreach ($value as $valKey => $val) {
+            $client->lpush($key, $val);
+        }
 
-		return true;
-	}
+        if (is_null($expire) == false) {
+            $client->expire($key, $expire);
+        }
+
+        return true;
+    }
 }
