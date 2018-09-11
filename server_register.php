@@ -7,11 +7,13 @@
 </head>
 <body>
     <?php
-    if (isset($_GET['error'])) {?>
+    if (isset($_GET['error'])) {
+        ?>
         <div class="alert alert-danger" role="alert">
               <?php echo $_GET['error']; ?>
         </div>
-    <?php } ?>
+    <?php
+    } ?>
 		<div class="container partTwo" id="app">
         <div class=" container card text-white bg-dark mb-3" >
           <form method="post" action="../save_new_server.php">
