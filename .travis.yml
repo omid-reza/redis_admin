@@ -1,14 +1,12 @@
 language: php
-sudo: false
+php:
+  - "7.2.3"
+befor_install:
+  composer delf-update
+befor_script:
+  -composer install
+
 services:
   - redis-server
-before_script:
-  - composer self-update
-  - composer install --no-interaction --prefer-source --dev
-cache:
-  directories:
-    - $HOME/.composer/cache
-matrix:
-  include:
-    - php: hhvm
-script: vendor/bin/phpunit --debug
+
+script: php artisan
