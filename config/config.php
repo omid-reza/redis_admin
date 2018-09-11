@@ -27,11 +27,10 @@ class config
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
             ]);
-            
-		 }
+        }
 
         return 'host or port not set';
-	 }
+    }
 
     /**
      * @return mixed
