@@ -9,10 +9,9 @@
     <a href="https://http://redis.io/" target="_blank">
         <img alt="Minimum redis version" src="https://img.shields.io/badge/redis-%3E%3D%201.0.0-FC5252.svg">
     </a>
-    <a href="composer.json" target="_blank">
-        <img alt="dependensi" src="https://img.shields.io/hackage-deps/v/lens.svg">
+    <a href="https://github.styleci.io/repos/146747083">
+        <img src="https://github.styleci.io/repos/146747083/shield?style=plastic&branch=master" alt="StyleCi status" />
     </a>
-    <a href="https://requires.io/github/snip77/redis-console/requirements/?branch=master"><img src="https://requires.io/github/snip77/redis-console/requirements.svg?branch=master" alt="Requirements Status" /></a>
 </p>
 
 
