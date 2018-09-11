@@ -1,6 +1,6 @@
 <?php
 
-require'vendor/autoload.php';
+require 'vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 if ((!isset($_POST['host'])) || (!isset($_POST['port']))) {
