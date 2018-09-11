@@ -32,7 +32,6 @@ class config
         return 'host or port not set';
 	 }
 
-
     /**
      * @return mixed
      */

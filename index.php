@@ -7,4 +7,4 @@
         header('location:server_register.php');
     } else {
         header('location:select_server.php');
-   }
+    }
