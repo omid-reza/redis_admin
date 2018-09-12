@@ -72,7 +72,20 @@
  ```
  
  #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
- 
+
+## OR
+
+### install manually
+    
+   #### clone project from github with this command :
+```php
+    git clone https://github.com/snip77/redis-console.git
+```
+   #### install requirements with this command:
+```php
+    composer install
+```
+
 ### setup host and port :
   for set up you should go to ```db.yaml``` in  config directory :
   
