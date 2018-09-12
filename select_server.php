@@ -37,7 +37,7 @@
 			servers
 	   </div>
        <?php foreach ($servers as $key => $value) {
-            ?>
+        ?>
 		  <div class="alert alert-success PartSix server" role="alert">
 			<?php echo $value['host'].':'.$value['port']; ?>
             <a class="btn btn-danger remove PartThree" href="../server_remove.php?server=<?php echo $key; ?>"> Remove </a>
