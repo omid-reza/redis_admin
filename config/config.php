@@ -28,10 +28,12 @@ class config
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
             ]));
+
             try {
                 $this->getClient()->connect();
+                
                 return $this->getClient();
-            }catch (ConnectionException $e){
+            } catch (ConnectionException $e) {
                 return "can't connect to this server !";
             }
         }
