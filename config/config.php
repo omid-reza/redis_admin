@@ -6,6 +6,7 @@ require 'vendor/autoload.php';
 use Predis\Autoloader;
 use Predis\Client;
 use Symfony\Component\Yaml\Yaml;
+use Predis\Connection\ConnectionException;
 
 /**
  * @author Omid Reza
@@ -22,11 +23,17 @@ class config
     public function connect($server_id)
     {
         if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
-            return $this->client = new Client([
+            $this->setClient(new Client([
                 'scheme' => 'tcp',
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
-            ]);
+            ]));
+            try {
+                $this->getClient()->connect();
+                return $this->getClient();
+            }catch (ConnectionException $e){
+                return "can't connect to this server !";
+            }
         }
 
         return 'host or port not set';
@@ -50,19 +57,39 @@ class config
 
     public function getValue($key)
     {
-        switch ($this->client->type($key)) {
+        switch ($this->getClient()->type($key)) {
             case 'string':
-                return $this->client->get($key);
+                return $this->getClient()->get($key);
             case 'list':
-                return $this->client->lrange($key, 0, 4294967295);
+                return $this->getClient()->lrange($key, 0, 4294967295);
             case 'hash':
-                return $this->client->HGETALL($key);
+                return $this->getClient()->HGETALL($key);
             case 'set':
-                return $this->client->smembers($key);
+                return $this->getClient()->smembers($key);
             case 'zset':
-                return $this->client->ZRANGEBYSCORE($key, 0, 4294967295);
+                return $this->getClient()->ZRANGEBYSCORE($key, 0, 4294967295);
             default:
                 return;
         }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * @param mixed $client
+     *
+     * @return self
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+
+        return $this;
     }
 }
