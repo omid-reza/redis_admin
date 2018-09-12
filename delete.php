@@ -1,3 +1,8 @@
+<?php
+require 'vendor/autoload.php';
+use config\config;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +12,6 @@
 </head>
 <body>
 	<?php
-        require 'vendor/autoload.php';
-        use config\config;
-
         $config = new config();
         if (!isset($_GET['server'])) {
             ?>

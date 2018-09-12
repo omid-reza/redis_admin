@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 use config\config;
+
 ?>
 <!DOCTYPE html>
 <html>
