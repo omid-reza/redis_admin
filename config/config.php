@@ -31,7 +31,7 @@ class config
 
             try {
                 $this->getClient()->connect();
-                
+
                 return $this->getClient();
             } catch (ConnectionException $e) {
                 return "can't connect to this server !";
