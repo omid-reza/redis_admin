@@ -9,6 +9,7 @@
 	<?php
         require 'vendor/autoload.php';
         use config\config;
+
         $config = new config();
         if (!isset($_GET['server'])) {
             ?>
@@ -39,10 +40,11 @@
                   No record with key <?php echo $_GET['key']; ?>
                 </div>
             </div>
-        <?php }else{ ?>
-            <?php
-                $client->del($_GET['key']);
+        <?php
+        } else {
             ?>
+            <?php
+                $client->del($_GET['key']); ?>
             <div class="container PartOne">
                 <div class="card bg-light mb-3" >
                   <div class="card-header">

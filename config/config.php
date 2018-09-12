@@ -3,8 +3,8 @@
 namespace config;
 
 require 'vendor/autoload.php';
-use Predis\Client;
 use Predis\Autoloader;
+use Predis\Client;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -12,7 +12,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 class config
 {
-	private $client = Null;
+	private $client = null;
 	
 	public function __construct()
 	{	
@@ -29,7 +29,7 @@ class config
             ]);
 		}
 
-		return 'host or port not set';
+        return 'host or port not set';
 	}
 
 
