@@ -1,6 +1,17 @@
 <?php
+	
 	$port=2000;
+	
 	if (isset($argv[1]) && (int)($argv[1]))
 		$port=$argv[1];
-	echo 'server is runing in http://localhost:'.$port;	
-	shell_exec('php -S localhost:'.$port);
+	
+	$port_status = shell_exec('netstat -na | find "'.$port.'"');
+
+	if (is_null($port_status)) {
+		echo 'server is runing in http://localhost:'.$port;	
+		shell_exec('php -S localhost:'.$port);
+	} else {
+		echo "ERROR : Port ".$port." is used by other proccess ! \n";
+		echo "ERROR : Choose another port !";
+	}
+	
