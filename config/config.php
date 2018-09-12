@@ -5,8 +5,8 @@ namespace config;
 require 'vendor/autoload.php';
 use Predis\Autoloader;
 use Predis\Client;
-use Symfony\Component\Yaml\Yaml;
 use Predis\Connection\ConnectionException;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * @author Omid Reza
