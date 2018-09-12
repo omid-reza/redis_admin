@@ -2,17 +2,39 @@ body{
  background-image: linear-gradient(to left,#FC5252,#F237FE);
 }
 
-.PartOne{
+.PartOne {
 	margin-bottom: 2%;
 }
 
-.PartTwo{
+.PartTwo {
 	margin-top: 100px;
 }
 
-.PartSix{
+.PartThree{
+	float: right;
+	margin-top: -0.5%;
+}
+
+.PartSix {
 	text-align:center;
 }
-.PartSeven{
+
+.PartSeven {
 	text-decoration: none;
+}
+
+.remove, .keys{
+	opacity: 0;
+}
+
+.keys{
+	margin-right: 1%;
+}
+
+.server:hover .remove{
+	opacity: 1;
+}
+
+.server:hover .keys{
+	opacity: 1;
 }
