@@ -21,7 +21,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Operator\\": "op/",
+            "Operator\\": "Operator/",
             "config\\": "config/"
         }
     }

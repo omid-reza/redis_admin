@@ -1,17 +1,69 @@
 <?php
 	
-	$port=2000;
-	
-	if (isset($argv[1]) && (int)($argv[1]))
-		$port=$argv[1];
-	
-	$port_status = shell_exec('netstat -na | find "'.$port.'"');
+/**
+ * @author  omid reza heidari
+ */
+class server
+{
+	private $port = 2000;
+	private $port_status = null;
 
-	if (is_null($port_status)) {
-		echo 'server is runing in http://localhost:'.$port;	
-		shell_exec('php -S localhost:'.$port);
-	} else {
-		echo "ERROR : Port ".$port." is used by other proccess ! \n";
-		echo "ERROR : Choose another port !";
+	public function start($argv){
+		if (isset($argv[1]) && (int)($argv[1])) {
+			$this->setPort($argv[1]);
+		}
+		
+		$this->setPortStatus(shell_exec('netstat -na | find "'.$this->getPort().'"'));
+
+		if (is_null($this->getPortStatus())) {
+			echo 'server is runing in http://localhost:'.$this->getPort();	
+			shell_exec('php -S localhost:'.$this->getPort());
+		} else {
+			echo "ERROR : Port ".$this->getPort()." is used by other proccess ! \n";
+			echo "ERROR : Choose another port !";
+		}	
 	}
-	
+
+    /**
+     * @return mixed
+     */
+    public function getPort()
+    {
+        return $this->port;
+    }
+
+    /**
+     * @param mixed $port
+     *
+     * @return self
+     */
+    public function setPort($port)
+    {
+        $this->port = $port;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPortStatus()
+    {
+        return $this->port_status;
+    }
+
+    /**
+     * @param mixed $port_status
+     *
+     * @return self
+     */
+    public function setPortStatus($port_status)
+    {
+        $this->port_status = $port_status;
+
+        return $this;
+    }
+}
+
+$server = new server();
+$server->start($argv);
