@@ -3,6 +3,9 @@
     <a href="LICENSE" target="_blank">
         <img alt="Software License" src="https://poser.pugx.org/redis-console/redis-console/license">
     </a>
+    <a href="https://packagist.org/packages/redis-console/redis-console" target="_blank">
+        <img alt="Latest Stable Version" src="https://poser.pugx.org/redis-console/redis-console/v/stable">
+    </a>
     <a href="https://php.net/" target="_blank">
         <img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg">
     </a>
