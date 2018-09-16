@@ -21,8 +21,8 @@
     <a href="https://www.codefactor.io/repository/github/snip77/redis-console">
         <img src="https://www.codefactor.io/repository/github/snip77/redis-console/badge" />
     </a>
-    <a href="https://bettercodehub.com/results/snip77/redis-console">
-        <img src='https://bettercodehub.com/edge/badge/snip77/redis-console?branch=master'>
+    <a href="https://packagist.org/packages/redis-console/redis-console">
+        <img alt="composer.lock" src='https://poser.pugx.org/redis-console/redis-console/composerlock'>
     </a>
 </p>
 
