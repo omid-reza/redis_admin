@@ -26,9 +26,6 @@
     </a>
 </p>
 
-### server list page :
-![Loading . . .](cover/server_list.png)
-
 ## Features :
   - see all keys
   - see record detail
