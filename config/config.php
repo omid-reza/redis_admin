@@ -22,12 +22,21 @@ class config
 
     public function connect($server_id)
     {
+        $pass = $this->getPassword($server_id);
+        $options = null;
+        if (!is_null($pass)) {
+            $options = [
+                'parameters' => [
+                    'password' => $pass,
+                ],
+            ];
+        }
         if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
             $this->setClient(new Client([
                 'scheme' => 'tcp',
                 'host'   => $this->getHost($server_id),
                 'port'   => $this->getPort($server_id),
-            ]));
+            ]), $options);
 
             try {
                 $this->getClient()->connect();
@@ -55,6 +64,11 @@ class config
     public function getPort($server_id):int
     {
         return Yaml::parseFile('config/db.yaml')[$server_id]['port'];
+    }
+
+    public function getPassword($server_id)
+    {
+        return Yaml::parseFile('config/db.yaml')[$server_id]['password'];
     }
 
     public function getValue($key)

@@ -36,7 +36,20 @@
                   <input v-model="port" type="text"  width="100%" class="form-control" name="port">
                 </div>
               </div>
+              <div class="form-group row" v-if="btn_password_text!='Use Password'">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input v-model="password" type="password"  width="100%" class="form-control" name="password">
+                </div>
+              </div>
+              <div class="form-group row" v-if="btn_password_text!='Use Password'">
+                <label for="password_confirm" class="col-sm-2 col-form-label">confirm password</label>
+                <div class="col-sm-10">
+                  <input v-model="password_confirm" type="password"  width="100%" class="form-control" name="password_confirm">
+                </div>
+              </div>
                 <button type="submit" class="btn btn-success partOne partThree">Save</button> 
+                <a class="btn btn-warning partOne partThree partSix" v-text="btn_password_text" @click="change_password_status()"></a> 
             </form>
           </div>
         </div>
