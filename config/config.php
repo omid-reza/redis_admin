@@ -22,7 +22,7 @@ class config
     {
         Autoloader::register();
     }
-    
+
     /**
      * @method mixed connect to server
      */
