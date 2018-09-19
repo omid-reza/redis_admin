@@ -1,4 +1,4 @@
-<h1 align="center" >redis console</h1>
+<h1 align="center" >redis admin</h1>
 <p align="center">
     <a href="LICENSE" target="_blank">
         <img alt="Software License" src="https://poser.pugx.org/redis-console/redis-console/license">

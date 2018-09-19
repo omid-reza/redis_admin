@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Keys List - redis console</title>
+    <title>Keys List - redis admin</title>
     <link rel="stylesheet" type="text/css" href="assets/css/keys.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
     <script type="text/javascript" src="assets/vue.js"></script>

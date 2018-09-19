@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>edit - redis console</title>
+	<title>edit - redis admin</title>
     <link rel="stylesheet" type="text/css" href="assets/css/edit.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
 </head>

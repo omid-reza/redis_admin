@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>select server - redis console</title>
+    <title>select server - redis admin</title>
     <link rel="stylesheet" type="text/css" href="assets/css/select_server.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
 </head>

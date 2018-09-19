@@ -6,7 +6,7 @@ use config\config;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>delete - redis console</title>
+	<title>delete - redis admin</title>
     <link rel="stylesheet" type="text/css" href="assets/css/delete.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
 </head>
