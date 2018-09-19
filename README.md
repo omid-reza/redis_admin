@@ -71,7 +71,7 @@
   Then, use the `create-project` command to generate a new application:
   
  ```
-    composer create-project redis-console/redis-console -s dev path/to/install
+    composer create-project redis_admin/redis_admin -s dev path/to/install
  ```
  
  #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
@@ -82,7 +82,7 @@
     
    #### clone project from github with this command :
 ```php
-    git clone https://github.com/snip77/redis-console.git
+    git clone https://github.com/snip77/redis_admin.git
 ```
    #### install requirements with this command:
 ```php

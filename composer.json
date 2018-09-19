@@ -1,5 +1,5 @@
 {
-    "name": "redis-console/redis-console",
+    "name": "redis_admin/redis_admin",
     "description": "Manage Redis server keys (show-delete-search-insert-edit)",
     "keywords": ["nosql", "redis", "predis"],
     "require": {
