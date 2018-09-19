@@ -1,13 +1,13 @@
 <h1 align="center" >redis admin</h1>
 <p align="center">
     <a href="LICENSE" target="_blank">
-        <img alt="Software License" src="https://poser.pugx.org/redis-console/redis-console/license">
+        <img alt="Software License" src="https://poser.pugx.org/redis_admin/redis_admin/license">
     </a>
-    <a href="https://packagist.org/packages/redis-console/redis-console" target="_blank">
-        <img alt="Latest Stable Version" src="https://poser.pugx.org/redis-console/redis-console/v/stable">
+    <a href="https://packagist.org/packages/redis_admin/redis_admin" target="_blank">
+        <img alt="Latest Stable Version" src="https://poser.pugx.org/redis_admin/redis_admin/v/stable">
     </a>
-    <a href="https://packagist.org/packages/redis-console/redis-console" target="_blank">
-        <img alt="Latest Unstable Version" src="https://poser.pugx.org/redis-console/redis-console/v/unstable">
+    <a href="https://packagist.org/packages/redis_admin/redis_admin" target="_blank">
+        <img alt="Latest Unstable Version" src="https://poser.pugx.org/redis_admin/redis_admin/v/unstable">
     </a>
     <a href="https://php.net/" target="_blank">
         <img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg">
@@ -18,11 +18,11 @@
     <a href="https://github.styleci.io/repos/146747083">
         <img src="https://github.styleci.io/repos/146747083/shield?style=plastic&branch=master" alt="StyleCi status" />
     </a>
-    <a href="https://www.codefactor.io/repository/github/snip77/redis-console">
-        <img src="https://www.codefactor.io/repository/github/snip77/redis-console/badge" />
+    <a href="https://www.codefactor.io/repository/github/snip77/redis_admin">
+        <img src="https://www.codefactor.io/repository/github/snip77/redis_admin/badge" />
     </a>
-    <a href="https://packagist.org/packages/redis-console/redis-console">
-        <img alt="composer.lock" src='https://poser.pugx.org/redis-console/redis-console/composerlock'>
+    <a href="https://packagist.org/packages/redis_admin/redis_admin">
+        <img alt="composer.lock" src='https://poser.pugx.org/redis_admin/redis_admin/composerlock'>
     </a>
 </p>
 
