@@ -4,11 +4,12 @@ namespace Operator;
 
 require 'vendor/autoload.php';
 use config\config;
+use Operator\DataType;
 
 /**
  * @author  omid reza heidari
  */
-class SortedListType
+class SortedListType implements DataType
 {
     public static function insert($server_id, $key, $value, $expire = null)
     {

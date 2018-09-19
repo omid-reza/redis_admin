@@ -4,11 +4,12 @@ namespace Operator;
 
 require 'vendor/autoload.php';
 use config\config;
+use Operator\DataType;
 
 /**
  * @author omid reza heidari
  */
-class ListType
+class ListType implements DataType
 {
     public static function insert($server_id, $key, $value, $expire = null)
     {
