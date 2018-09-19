@@ -5,23 +5,20 @@
  */
 class server
 {
+    /**
+     * @var int set server port
+     * @var  array set this port history to start server
+     */
 	private $port = 2000;
-	private $port_status = null;
 
 	public function start($argv){
 		if (isset($argv[1]) && (int)($argv[1])) {
 			$this->setPort($argv[1]);
 		}
 		
-		$this->setPortStatus(shell_exec('netstat -na | find "'.$this->getPort().'"'));
 
-		if (is_null($this->getPortStatus())) {
-			echo 'server is runing in http://localhost:'.$this->getPort();	
-			shell_exec('php -S localhost:'.$this->getPort());
-		} else {
-			echo "ERROR : Port ".$this->getPort()." is used by other proccess ! \n";
-			echo "ERROR : Choose another port !";
-		}	
+        echo 'server is runing in http://localhost:'.$this->getPort();	
+		shell_exec('php -S localhost:'.$this->getPort());
 	}
 
     /**
@@ -44,25 +41,6 @@ class server
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPortStatus()
-    {
-        return $this->port_status;
-    }
-
-    /**
-     * @param mixed $port_status
-     *
-     * @return self
-     */
-    public function setPortStatus($port_status)
-    {
-        $this->port_status = $port_status;
-
-        return $this;
-    }
 }
 
 $server = new server();

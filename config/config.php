@@ -13,13 +13,19 @@ use Symfony\Component\Yaml\Yaml;
  */
 class config
 {
+    /**
+     *@var Predis\Client var to have connection
+     */
     private $client = null;
 
     public function __construct()
     {
         Autoloader::register();
     }
-
+    
+    /**
+     * @method mixed connect to server
+     */
     public function connect($server_id)
     {
         $pass = $this->getPassword($server_id);
@@ -32,11 +38,8 @@ class config
             ];
         }
         if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
-            $this->setClient(new Client([
-                'scheme' => 'tcp',
-                'host'   => $this->getHost($server_id),
-                'port'   => $this->getPort($server_id),
-            ]), $options);
+            $params = ['scheme' => 'tcp', 'host'   => $this->getHost($server_id), 'port'   => $this->getPort($server_id)];
+            $this->setClient(new Client($params, $options));
 
             try {
                 $this->getClient()->connect();
@@ -71,6 +74,9 @@ class config
         return Yaml::parseFile('config/db.yaml')[$server_id]['password'];
     }
 
+    /**
+     * @method array|string get value(s) by key
+     */
     public function getValue($key)
     {
         switch ($this->getClient()->type($key)) {
