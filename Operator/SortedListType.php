@@ -4,7 +4,6 @@ namespace Operator;
 
 require 'vendor/autoload.php';
 use config\config;
-use Operator\DataType;
 
 /**
  * @author  omid reza heidari

@@ -32,8 +32,8 @@ class config
         $options = [
             'parameters' => [
                 'password' => $this->getPassword($server_id),
-                'database' => $this->getDatabase($server_id)
-            ]
+                'database' => $this->getDatabase($server_id),
+            ],
         ];
         if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
             $params = ['scheme' => 'tcp', 'host'   => $this->getHost($server_id), 'port'   => $this->getPort($server_id)];

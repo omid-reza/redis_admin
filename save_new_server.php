@@ -17,15 +17,15 @@ if ((!isset($_POST['host'])) || (!isset($_POST['port']))) {
         $pass = $_POST['password'];
     }
 
-    if (isset($_POST['database']) && $_POST['database'] !="") {
+    if (isset($_POST['database']) && $_POST['database'] != '') {
         $database = $_POST['database'];
     }
 
     array_push($servers,
-        ['host' =>  $_POST['host'],
-        'port' => (int)$_POST['port'],
-        'password'=>$_POST['password'],
-        'database'=> (int)$database]);
+        ['host'   => $_POST['host'],
+        'port'    => (int) $_POST['port'],
+        'password'=> $_POST['password'],
+        'database'=> (int) $database, ]);
 
     $yaml = Yaml::dump($servers);
     file_put_contents('config/db.yaml', $yaml);
