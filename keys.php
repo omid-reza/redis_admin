@@ -88,9 +88,9 @@
             ?>
             <nav aria-label="Pages">
                 <ul class="pagination justify-content-center">
-                    <li class="page-item <?php if($page == 1) {
-                        echo"disabled";
-                    } ?>">
+                    <li class="page-item <?php if ($page == 1) {
+                echo'disabled';
+            } ?>">
                         <a class="page-link" href="<?php echo '?server='.$server_id.'&page='.($page - 1); ?>" tabindex="-1">Previous</a>
                     </li>    
                     <?php
@@ -113,6 +113,6 @@
                 </ul>
             </nav>
         <?php
-    } ?>  
+        } ?>  
 </body>
 </html>
