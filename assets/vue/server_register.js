@@ -6,7 +6,8 @@ new Vue({
           host:"",
           port:"",
           password:"",
-          password_confirm:""
+          password_confirm:"",
+          database:""
         },
         methods:{
             checkForm: function (e) {

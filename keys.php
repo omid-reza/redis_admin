@@ -55,9 +55,10 @@
 
                     </div>
                 </div>    
-                <div class="alert alert-primary" role="alert" style="">
-                        <?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?>
-                        <div  class="partEight"><?php echo $client->dbsize().' Key'; ?></div>
+                <div class="alert alert-primary partNine" role="alert">
+                        <div><?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?></div>
+                        <div><?php echo $client->dbsize().' Key'; ?></div>
+                        <div><?php echo 'database : '.$config->getDatabase($server_id); ?></div>
                 </div>
                 <div class="alert alert-dark PartSix" role="alert">
                         keys

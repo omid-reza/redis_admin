@@ -31,6 +31,7 @@ body{
 	text-decoration: none;
 }
 
-.partEight{
-	float: right;
+.partNine{
+	justify-content: space-between;
+	display: flex;
 }
