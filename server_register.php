@@ -45,7 +45,7 @@
               <div class="form-group row">
                 <label for="database" class="col-sm-2 col-form-label">database</label>
                 <div class="col-sm-10">
-                  <input v-model="database" type="number"  width="100%" class="form-control" name="database">
+                  <input v-model="database" type="number"  width="100%" class="form-control" name="database" min="0" max="15">
                   note : default database is 0
                 </div>
               </div>

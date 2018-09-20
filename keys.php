@@ -45,7 +45,8 @@
             </div>
         <?php
         } else {
-            $server_id = $_GET['server']; ?>
+            $server_id = $_GET['server'];
+            $key_count = $client->dbsize(); ?>
             <div class="container jumbotron PartTwo">
                 <div class="PartThree">
                     <div class="PartFour">
@@ -57,14 +58,21 @@
                 </div>    
                 <div class="alert alert-primary partNine" role="alert">
                         <div><?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?></div>
-                        <div><?php echo $client->dbsize().' Key'; ?></div>
+                        <div><?php echo $key_count.' Key'; ?></div>
                         <div><?php echo 'database : '.$config->getDatabase($server_id); ?></div>
                 </div>
                 <div class="alert alert-dark PartSix" role="alert">
                         keys
                 </div>
             <?php
-            foreach ($client->keys('*') as $key => $value) {
+            $pagedArray = array_chunk($client->keys('*'), 10, true);
+            $page = 1;
+            
+            if (isset($_GET['page'])) {
+                $page = (int)$_GET['page'];
+            }
+
+            foreach ($pagedArray[$page-1] as $key => $value) {
                 ?>
                 <a class="PartSeven" href="show.php?key=<?php echo $value; ?>&server=<?php echo $_GET['server']; ?>">
                     <div class="alert alert-success PartSix" role="alert">
@@ -75,5 +83,30 @@
             }
         } ?>
         </div>
+        <?php
+        if ($key_count > 10) { ?>
+            <nav aria-label="Pages">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item <?php if($page == 1){ echo"disabled"; } ?>">
+                        <a class="page-link" href="<?php echo '?server='.$server_id.'&page='.($page-1); ?>" tabindex="-1">Previous</a>
+                    </li>    
+                    <?php
+                    $page_count = $key_count/10;
+                    if ($page_count%10!=0) {
+                        $page_count++;
+                    }
+                    for ($i=1; $i <  $page_count; $i++) { ?>
+                        <li class="page-item">
+                            <a class="page-link" href="<?php echo '?server='.$server_id.'&page='.$i; ?>"><?php echo $i; ?></a>
+                        </li>
+                    <?php }
+                    ?>
+                    <li class="page-item <?php if($page==sizeof($pagedArray)){ echo"disabled"; } ?>">
+                        <a class="page-link" href="<?php echo '?server='.$server_id.'&page='.($page+1); ?>">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        <?php
+    } ?>  
 </body>
 </html>
