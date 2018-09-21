@@ -100,7 +100,9 @@
             }
             for ($i = 1; $i < $page_count; $i++) {
                 ?>
-                        <li class="page-item <?php if($page==$i){ echo "active"; } ?>">
+                        <li class="page-item <?php if ($page == $i) {
+                    echo 'active';
+                } ?>">
                             <a class="page-link" href="<?php echo '?server='.$server_id.'&page='.$i; ?>"><?php echo $i; ?></a>
                         </li>
                     <?php
