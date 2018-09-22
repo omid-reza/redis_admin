@@ -29,24 +29,10 @@
 ## Features :
   - see all keys
   - see record detail
-    - types availble
-      - Strings
-      - lists
-      - sorted lists
-      - sets
-      - hashs
   - search for match keys
   - edit keys
-    - types
-      - string
   - delete keys
   - insert record
-    - types  availble 
-      - Strings
-      - Lists
-      - Hashs
-      - Sets
-      - sorted lists
     - set expire time
     
     
