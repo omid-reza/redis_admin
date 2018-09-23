@@ -57,10 +57,10 @@
   Then, use the `create-project` command to generate a new application:
   
  ```
-    composer create-project redis_admin/redis_admin -s dev path/to/install
+    composer create-project redis_admin/redis_admin PATH_TO_INSTALL
  ```
  
- #### Composer will install the redis Console and all its dependencies under the `path/to/install` directory
+ #### Composer will install the redis Console and all its dependencies under the `PATH_TO_INSTALL` directory
 
 ## OR
 
