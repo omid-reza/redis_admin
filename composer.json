@@ -23,7 +23,6 @@
         "psr-4": {
             "Operator\\": "Operator/",
             "config\\": "config/",
-            "app\\":"app/"
         }
     },
     "config": {
