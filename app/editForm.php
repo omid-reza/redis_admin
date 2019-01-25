@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php
-        require 'vendor/autoload.php';
         use config\config;
 
         $config = new config();
@@ -54,7 +53,7 @@
             ?>
             <div class="container PartOne">
                 <div class=" container card text-white bg-dark mb-3" >
-                  <form action="../edit.php?key=<?php echo $_GET['key']; ?>" method="get">
+                  <form action="../edit?key=<?php echo $_GET['key']; ?>" method="get">
                       <input type="hidden" name="pervios_key" value="<?php echo $_GET['key']; ?>">
                       <div class="form-group row PartFour">
                         <label for="key" class="col-sm-2 col-form-label">Key</label>

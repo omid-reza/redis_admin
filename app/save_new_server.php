@@ -1,10 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 if ((!isset($_POST['host'])) || (!isset($_POST['port']))) {
-    header('location:../server_register.php?error=host or port not set in request');
+    header('location:../server_register?error=host or port not set in request');
 } else {
     $pass = null;
     $database = 0;

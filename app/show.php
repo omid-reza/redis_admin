@@ -7,7 +7,6 @@
 </head>
 <body>
 	<?php
-        require 'vendor/autoload.php';
         use config\config;
 
         $config = new config();
@@ -33,7 +32,7 @@
             ?>
             <div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">errors</span>
-                <a class="PartThree" href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">Main page</a>
+                <a class="PartThree" href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">Main page</a>
                 <div class="alert alert-danger" role="alert">
                   please set key in header ! ! !
                 </div>
@@ -42,7 +41,7 @@
             ?>
 			<div class="container jumbotron PartTwo">
                 <span class="btn btn-outline-danger PartOne">errors</span>
-                <a class="PartThree" href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">Main page</a>
+                <a class="PartThree" href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">Main page</a>
                 <div class="alert alert-danger" role="alert">
                   No record with key <?php echo $_GET['key']; ?>
                 </div>
@@ -54,9 +53,9 @@
             	<div class="card text-white bg-dark mb-3" >
 				  <div class="card-header">
                     Type : <?php echo $client->type($_GET['key']); ?>
-                    <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main page</a>  
-                    <a href="../delete.php?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-danger PartFour">Delete</a>
-                    <a href="../editForm.php?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">Edit</a> 
+                    <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main page</a>  
+                    <a href="../delete?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-danger PartFour">Delete</a>
+                    <a href="../editForm?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">Edit</a> 
                   </div>
 				  <div class="card-body">
                     <h5 class="card-title">Key : <?php echo $_GET['key']; ?></h5>

@@ -20,7 +20,7 @@
       </div>
   		<div class="container partTwo">
           <div class=" container card text-white bg-dark mb-3" >
-            <form method="post" action="../save_new_server.php" @submit="checkForm">
+            <form method="post" action="save_new_server" @submit="checkForm">
               <div class="card-header">
                 Register a new server
               </div>

@@ -20,10 +20,10 @@
           ?>
       <div class="container PartSeven" id="app">
         <div class=" container card text-white bg-dark mb-3" >
-          <form method="post" action="../insert.php">
+          <form method="post" action="../insert">
             <div class="card-header">
               Insert
-              <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartOne">Main Page</a>
+              <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartOne">Main Page</a>
             </div>
             <div class="form-group PartTwo">
               <label for="exampleFormControlSelect1">Type</label>

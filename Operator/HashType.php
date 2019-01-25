@@ -8,7 +8,7 @@ use config\config;
 /**
   * @author omid reza heidari
   */
- class HashType implements DataType
+class HashType implements DataType
  {
      public static function insert($server_id, $key, $value, $expire = null)
      {

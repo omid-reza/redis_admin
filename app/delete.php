@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 use config\config;
 
 ?>
@@ -51,7 +50,7 @@ use config\config;
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Deleted successfully
-                  <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                  <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">record with key <span style="color: red"><?php echo $_GET['key']; ?></span> Deleted</h5>

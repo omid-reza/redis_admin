@@ -1,10 +1,9 @@
 <?php
-    require 'vendor/autoload.php';
     use Symfony\Component\Yaml\Yaml;
 
     $servers = Yaml::parseFile('config/db.yaml');
     if (is_null($servers)) {
-        header('location:../server_register.php');
+        header('location:../server_register');
     }
 ?>
 <!DOCTYPE html>
@@ -32,7 +31,7 @@
     <?php
     } ?>
 	<div class="container jumbotron PartTwo"> 
-		<a href="../server_register.php" class="btn btn-warning PartOne">Add Server</a>
+		<a href="../server_register" class="btn btn-warning PartOne">Add Server</a>
 	   <div class="alert alert-dark PartSix" role="alert">
 			servers
 	   </div>
@@ -40,8 +39,8 @@
         ?>
 		  <div class="alert alert-success PartSix server" role="alert">
 			<?php echo $value['host'].':'.$value['port']; ?>
-            <a class="btn btn-danger remove PartThree" href="../server_remove.php?server=<?php echo $key; ?>"> Remove </a>
-            <a class="btn btn-dark keys PartThree" href="../keys.php?server=<?php echo $key; ?>"> Keys </a>
+            <a class="btn btn-danger remove PartThree" href="../server_remove?server=<?php echo $key; ?>"> Remove </a>
+            <a class="btn btn-dark keys PartThree" href="../keys?server=<?php echo $key; ?>"> Keys </a>
 	   	   </div>
        <?php
     } ?>

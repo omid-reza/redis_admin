@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 use config\config;
 
 ?>
@@ -48,12 +47,12 @@ use config\config;
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Resualt for : <?php echo $_GET['key']?>
-                  <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                  <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
                   </div>
                   <?php
                   if (count($client->keys('*'.$_GET['key'].'*'), 1) == 0) {
                       ?>
-                    <a href="show.php?key=<?php echo $value?>" class="partFour">
+                    <a href="show?key=<?php echo $value?>" class="partFour">
                         <div class="alert alert-warning partFive" role="alert">
                             No match resualt !!
                         </div>
@@ -62,7 +61,7 @@ use config\config;
                   } else {
                       foreach ($client->keys('*'.$_GET['key'].'*') as $key => $value) {
                           ?>
-                            <a href="show.php?key=<?php echo $value; ?>" class="partFour">
+                            <a href="show?server=<?php echo $_GET['server'] ?>&key=<?php echo $value; ?>" class="partFour">
                                 <div class="alert alert-secondary partFive" role="alert">
                                         <?php echo $value; ?>
                                 </div>

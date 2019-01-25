@@ -7,7 +7,6 @@
 </head>
 <body>
 	<?php
-        require 'vendor/autoload.php';
         use config\config;
 
         $config = new config();
@@ -71,8 +70,8 @@
                 <div class="card bg-light mb-3" >
                   <div class="card-header">
                     Updated
-                  <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
-                  <a href="../show.php?key=<?php echo $_GET['key']?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">View Record</a>
+                  <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                  <a href="../show?key=<?php echo $_GET['key']?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">View Record</a>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">record with key <span style="color: red"><?php echo $_GET['pervios_key']; ?></span> updated</h5>

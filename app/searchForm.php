@@ -20,10 +20,10 @@
           ?>
       <div class="container partTwo">
         <div class=" container card text-white bg-dark mb-3" >
-          <form action="../searchResualt.php" method="get">
+          <form action="../searchResualt" method="get">
             <div class="card-header">
               Search
-              <a href="../keys.php?server=<?php echo $_GET['server']; ?>" class="btn btn-warning partOne">Main Page</a>
+              <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning partOne">Main Page</a>
             </div>
             <div class="form-group row partThree">
               <label for="key" class="col-sm-2 col-form-label">Key to search</label>

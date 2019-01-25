@@ -22,7 +22,6 @@
         </div>
     <?php
     }
-        require 'vendor/autoload.php';
         use config\config;
 
         $config = new config();
@@ -50,9 +49,9 @@
             <div class="container jumbotron PartTwo">
                 <div class="PartThree">
                     <div class="PartFour">
-                        <a href="../insertForm.php?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">Insert</a>
-                    <a href="../index.php" class="btn btn-warning PartFive partEight">server lists</a>
-                    <a href="../searchForm.php?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">Search</a>
+                        <a href="../insertForm?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">Insert</a>
+                    <a href="../index" class="btn btn-warning PartFive partEight">server lists</a>
+                    <a href="../searchForm?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">Search</a>
 
                     </div>
                 </div>    
@@ -74,7 +73,7 @@
 
             foreach ($pagedArray[$page - 1] as $key => $value) {
                 ?>
-                <a class="PartSeven" href="show.php?key=<?php echo $value; ?>&server=<?php echo $_GET['server']; ?>">
+                <a class="PartSeven" href="show?key=<?php echo $value; ?>&server=<?php echo $_GET['server']; ?>">
                     <div class="alert alert-success PartSix" role="alert">
                             <?php echo $value; ?>
                     </div>

@@ -22,7 +22,8 @@
     "autoload": {
         "psr-4": {
             "Operator\\": "Operator/",
-            "config\\": "config/"
+            "config\\": "config/",
+            "app\\":"app/"
         }
     },
     "config": {

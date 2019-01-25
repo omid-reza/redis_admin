@@ -1,6 +1,5 @@
 <?php
 
-require 'vendor/autoload.php';
 use Operator\HashType;
 use Operator\ListType;
 use Operator\SetType;
@@ -22,9 +21,9 @@ if (!isset($_POST['server'])) {
                 $res = StringType::insert($_POST['server'], $key, $value);
             }
             if ($res == true) {
-                header('location:../keys.php?message=created&server='.$_POST['server']);
+                header('location:../keys?message=created&server='.$_POST['server']);
             } else {
-                header('location:../keys.php?error=nuknow&server='.$_POST['server']);
+                header('location:../keys?error=nuknow&server='.$_POST['server']);
             }
             break;
         case 'Hashe':
@@ -36,9 +35,9 @@ if (!isset($_POST['server'])) {
                 $res = HashType::insert($_POST['server'], $key, $value);
             }
             if ($res == true) {
-                header('location:../keys.php?message=created&server='.$_POST['server']);
+                header('location:../keys?message=created&server='.$_POST['server']);
             } else {
-                header('location:../keys.php?error=nuknow&server='.$_POST['server']);
+                header('location:../keys?error=nuknow&server='.$_POST['server']);
             }
             break;
         case 'List':
@@ -50,9 +49,9 @@ if (!isset($_POST['server'])) {
                 $res = ListType::insert($_POST['server'], $key, $value);
             }
             if ($res == true) {
-                header('location:../keys.php?message=created&server='.$_POST['server']);
+                header('location:../keys?message=created&server='.$_POST['server']);
             } else {
-                header('location:../keys.php?error=nuknow&server='.$_POST['server']);
+                header('location:../keys?error=nuknow&server='.$_POST['server']);
             }
             break;
         case 'Set':
@@ -64,9 +63,9 @@ if (!isset($_POST['server'])) {
                 $res = SetType::insert($_POST['server'], $key, $value);
             }
             if ($res == true) {
-                header('location:../keys.php?message=created&server='.$_POST['server']);
+                header('location:../keys?message=created&server='.$_POST['server']);
             } else {
-                header('location:../keys.php?error=nuknow&server='.$_POST['server']);
+                header('location:../keys?error=nuknow&server='.$_POST['server']);
             }
             break;
         case 'Sorted List':
@@ -78,12 +77,12 @@ if (!isset($_POST['server'])) {
                 $res = SortedListType::insert($_POST['server'], $key, $value);
             }
             if ($res == true) {
-                header('location:../keys.php?message=created&server='.$_POST['server']);
+                header('location:../keys?message=created&server='.$_POST['server']);
             } else {
-                header('location:../keys.php?error=nuknow&server='.$_POST['server']);
+                header('location:../keys?error=nuknow&server='.$_POST['server']);
             }
             break;
     }
 } else {
-    header('location:../index.php?error=paramiter mising');
+    header('location:../index?error=paramiter mising');
 }
