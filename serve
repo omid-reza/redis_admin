@@ -42,6 +42,4 @@ class server
     }
 
 }
-
-$server = new server();
-$server->start($argv);
+(new server)->start($argv);
