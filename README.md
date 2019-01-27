@@ -39,10 +39,10 @@
 
 ## Requirments
 #### Redis
-  Install redis from https://redis.io/download for your os
+  You can install redis from https://redis.io/download
       
  #### Php
-  Install from http://php.net/downloads.php
+  You can install php from http://php.net/downloads.php
 
 
 ## Installation :
@@ -76,7 +76,8 @@
 ```
 
 ### setup host and port :
-  for set up you should go to ```db.yaml``` in  config directory :
+  You can do it start page for or go to ```db.yaml``` in  config directory and put information in this file(need yaml struct!)
+  
   
 ## Use :
   #### use default port:
