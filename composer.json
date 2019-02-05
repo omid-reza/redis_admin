@@ -1,6 +1,6 @@
 {
     "name": "redis_admin/redis_admin",
-    "description": "Manage Redis server keys (show-delete-search-insert-edit)",
+    "description": "Manage Redis servers",
     "keywords": ["nosql", "redis", "predis"],
     "require": {
         "php": "^7.1.3",
