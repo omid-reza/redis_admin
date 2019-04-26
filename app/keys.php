@@ -50,7 +50,7 @@
                 <div class="PartThree">
                     <div class="PartFour">
                         <a href="../insertForm?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">Insert</a>
-                    <a href="../index" class="btn btn-warning PartFive partEight">server lists</a>
+                    <a href="../" class="btn btn-warning PartFive partEight">server lists</a>
                     <a href="../searchForm?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">Search</a>
 
                     </div>

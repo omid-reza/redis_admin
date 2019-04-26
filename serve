@@ -17,8 +17,8 @@ class server
 		}
 		
 
-        echo 'server is runing in http://localhost:'.$this->getPort();	
-		shell_exec('php -S localhost:'.$this->getPort());
+        echo 'server is runing in http://127.0.0.1:'.$this->getPort();	
+		shell_exec('php -S 127.0.0.1:'.$this->getPort());
 	}
 
     /**
