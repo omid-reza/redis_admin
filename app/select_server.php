@@ -1,7 +1,7 @@
 <?php
     use Symfony\Component\Yaml\Yaml;
 
-    $servers = Yaml::parseFile('config/db.yaml');
+$servers = Yaml::parseFile('config/db.yaml');
     if (is_null($servers)) {
         header('location:../server_register');
     }
