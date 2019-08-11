@@ -21,9 +21,9 @@
   		<div class="container partTwo">
           <div class=" container card text-white bg-dark mb-3" >
             <form method="post" action="save_new_server" @submit="checkForm">
-              <div class="card-header">
+              <h3 class="card-header">
                 Register a new server
-              </div>
+              </h3>
               <div class="form-group row partFour">
                 <label for="host" class="col-sm-2 col-form-label">Host</label>
                 <div class="col-sm-10">
@@ -33,14 +33,13 @@
                 <div class="form-group row">
                 <label for="port" class="col-sm-2 col-form-label">Port</label>
                 <div class="col-sm-10">
-                  <input v-model="port" type="text"  width="100%" class="form-control" name="port">
+                  <input v-model="port" type="text"  width="100%" class="form-control" name="port" placeholder="Default port is 6379">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="database" class="col-sm-2 col-form-label">database</label>
                 <div class="col-sm-10">
-                  <input v-model="database" type="number"  width="100%" class="form-control" name="database" min="0" max="15">
-                  note : default database is 0
+                  <input v-model="database" type="number"  width="100%" class="form-control" name="database" min="0" max="15" placeholder="Default database is 0">
                 </div>
               </div>
               <div class="form-group row" v-if="btn_password_text!='Use Password'">

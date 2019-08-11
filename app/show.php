@@ -8,8 +8,7 @@
 <body>
 	<?php
         use config\config;
-
-$config = new config();
+        $config = new config();
         if (!isset($_GET['server'])) {
             ?>
             <div class="container jumbotron PartTwo">
@@ -70,7 +69,9 @@ $config = new config();
                     <br>
                     <?php if ($client->ttl($_GET['key']) > -1) {
                 ?>
-                       <h5 class="card-text">Expired in : <?php echo $client->ttl($_GET['key']); ?> second (-1 mean to time left . can be alive for ever)</h5>
+                       <h5 class="card-text">Expired in : <?php echo $client->ttl($_GET['key']); ?>
+                           Seconds
+                       </h5>
                     <?php
             } else {
                 ?>
@@ -82,6 +83,5 @@ $config = new config();
         <?php
         } ?>
         </div>
-        
 </body>
 </html>

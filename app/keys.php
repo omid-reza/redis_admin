@@ -94,9 +94,8 @@
                     </li>    
                     <?php
                     $page_count = $key_count / 10;
-            if ($page_count % 10 != 0) {
-                $page_count++;
-            }
+                    if ($page_count % 10 != 0)
+                        $page_count++;
             for ($i = 1; $i < $page_count; $i++) {
                 ?>
                         <li class="page-item <?php if ($page == $i) {

@@ -14,7 +14,7 @@
     "authors": [
         {
             "name": "omid reza heidari",
-            "email": "omid.rez.heidari.orh@gmail.com",
+            "email": "omid77.orh@gmail.com",
             "homepage": "https://github.com/snip77",
             "role": "Developer"
         }
@@ -22,7 +22,8 @@
     "autoload": {
         "psr-4": {
             "Operator\\": "app/Operator/",
-            "config\\": "config/"
+            "config\\": "config/",
+            "Route\\": "Routing"
         }
     },
     "config": {

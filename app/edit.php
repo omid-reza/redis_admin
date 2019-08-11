@@ -8,8 +8,7 @@
 <body>
 	<?php
         use config\config;
-
-$config = new config();
+        $config = new config();
         if (!isset($_GET['server'])) {
             ?>
             <div class="container jumbotron">

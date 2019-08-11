@@ -44,8 +44,7 @@ use config\config;
         <?php
         } else {
             ?>
-            <?php
-                $client->del($_GET['key']); ?>
+            <?php $client->del($_GET['key']); ?>
             <div class="container PartOne">
                 <div class="card bg-light mb-3" >
                   <div class="card-header">

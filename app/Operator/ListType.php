@@ -2,12 +2,8 @@
 
 namespace Operator;
 
-require 'vendor/autoload.php';
 use config\config;
 
-/**
- * @author omid reza heidari
- */
 class ListType implements DataType
 {
     public static function insert($server_id, $key, $value, $expire = null)

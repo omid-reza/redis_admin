@@ -1,19 +1,20 @@
 <?php
 
-require 'Route.php';
-$route = new Route();
+namespace Route;
 
-$route->get('/', 'app/index');
-$route->get('/keys', 'app/keys');
-$route->get('/select_server', 'app/select_server');
-$route->get('/server_remove', 'app/server_remove');
-$route->get('/server_register', 'app/server_register');
-$route->get('/save_new_server', 'app/save_new_server');
-$route->get('/show', 'app/show');
-$route->get('/delete', 'app/delete');
-$route->get('/searchForm', 'app/searchForm');
-$route->get('/searchResualt', 'app/searchResualt');
-$route->get('/insertForm', 'app/insertForm');
-$route->get('/insert', 'app/insert');
-$route->get('/editForm', 'app/editForm');
-$route->get('/edit', 'app/edit');
+use Route\Route;
+
+Route::get('/', 'index');
+Route::get('/keys', 'keys');
+Route::get('/show', 'show');
+Route::get('/edit', 'edit');
+Route::get('/delete', 'delete');
+Route::get('/insert', 'insert');
+Route::get('/editForm', 'editForm');
+Route::get('/searchForm', 'searchForm');
+Route::get('/insertForm', 'insertForm');
+Route::get('/select_server', 'select_server');
+Route::get('/server_remove', 'server_remove');
+Route::get('/searchResualt', 'searchResualt');
+Route::get('/save_new_server', 'save_new_server');
+Route::get('/server_register', 'server_register');

@@ -8,9 +8,8 @@ if (!isset($_GET['server'])) {
     $servers = [];
     $current_server_id = 0;
     foreach (Yaml::parseFile('config/db.yaml') as $key => $value) {
-        if ($current_server_id != $_GET['server']) {
+        if ($current_server_id != $_GET['server'])
             array_push($servers, $value);
-        }
         $current_server_id++;
     }
     $current_server_id--;

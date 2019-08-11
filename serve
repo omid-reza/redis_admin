@@ -5,39 +5,24 @@
  */
 class server
 {
-    /**
-     * @var int set server port
-     * @var  array set this port history to start server
-     */
 	private $port = 2000;
 
 	public function start($argv){
-		if (isset($argv[1]) && (int)($argv[1])) {
+		if (isset($argv[1]) && (int)($argv[1]))
 			$this->setPort($argv[1]);
-		}
-		
 
-        echo 'server is runing in http://127.0.0.1:'.$this->getPort();	
+        echo 'Server is runing in http://127.0.0.1:'.$this->getPort()."\nPress Ctrl-C to quit.";
 		shell_exec('php -S 127.0.0.1:'.$this->getPort());
 	}
 
-    /**
-     * @return mixed
-     */
     public function getPort()
     {
         return $this->port;
     }
 
-    /**
-     * @param mixed $port
-     *
-     * @return self
-     */
     public function setPort($port)
     {
         $this->port = $port;
-
         return $this;
     }
 

@@ -1,22 +1,22 @@
 <?php
 
+namespace Route;
+
 class Route
 {
     private $request;
 
-    public function __construct()
+    private static function setUp()
     {
         $request = '/';
-        if (isset($_SERVER['PATH_INFO'])) {
+        if (isset($_SERVER['PATH_INFO']))
             $request = $_SERVER['PATH_INFO'];
-        }
-        $this->request = $request;
+        return $request;
     }
-
-    public function get($url, $path)
+    public static function get($url, $path)
     {
-        if ($this->request == $url) {
-            require_once __DIR__.'/../'.$path.'.php';
-        }
+        $request=static::setUp();
+        if ($request == $url)
+            require_once __DIR__.'/../app/'.$path.'.php';
     }
 }
