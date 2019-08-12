@@ -48,13 +48,13 @@
 ###   Use composer:
    If you don't have Composer yet, download it following the instructions on http://getcomposer.org/ or just run the following command:
 
-```zsh
+```console
     curl -s http://getcomposer.org/installer | php 
 ```
 
   Then, use the `create-project` command to generate a new application:
   
- ```zsh
+ ```console
     composer create-project redis_admin/redis_admin PATH_TO_INSTALL
  ```
  
@@ -65,11 +65,11 @@
 ### install manually
     
    #### clone project from github with this command :
-```zsh
+```console
     git clone https://github.com/snip77/redis_admin.git
 ```
    #### install requirements with this command:
-```zsh
+```console
     composer install
 ```
 
@@ -82,7 +82,7 @@
   Default port for app is `2000`
   - run this command in main directory
     
-```php
+```console
     php serve
 ```  
 
@@ -90,14 +90,14 @@
   
   #### set option port:
    You can set port like this:
-```php
+```console
    php serve PORT_NUMBER
 ``` 
   - Visit `localhost:PORT_NUMBER` in your browser
   
   For example 
  
- ```php
+ ```console
    php serve 2010
 ``` 
   - Visit `localhost:2010` in your browser
