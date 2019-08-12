@@ -48,13 +48,13 @@
 ###   Use composer:
    If you don't have Composer yet, download it following the instructions on http://getcomposer.org/ or just run the following command:
 
-```php
+```zsh
     curl -s http://getcomposer.org/installer | php 
 ```
 
   Then, use the `create-project` command to generate a new application:
   
- ```
+ ```zsh
     composer create-project redis_admin/redis_admin PATH_TO_INSTALL
  ```
  
@@ -65,11 +65,11 @@
 ### install manually
     
    #### clone project from github with this command :
-```
+```zsh
     git clone https://github.com/snip77/redis_admin.git
 ```
    #### install requirements with this command:
-```php
+```zsh
     composer install
 ```
 
