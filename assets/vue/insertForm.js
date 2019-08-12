@@ -3,7 +3,7 @@ new Vue({
         data: {
           key : "",
           valuecount:1,
-          addedExpire:0,
+          addedExpire:false,
           expireIn:null,
           type: "",
           expireKeyText:"Add Expire Time",
@@ -22,8 +22,7 @@ new Vue({
               this.expireKeyText="Remove Expire Time";    
             },
             typeChange(){
-              if(this.type == 'String')
-                this.valuecount=1;
+              if(this.type == 'String') this.valuecount=1;
             }
         }
 });

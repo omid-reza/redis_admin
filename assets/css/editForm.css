@@ -1,11 +1,9 @@
 body{
   background-image: linear-gradient(to left,#FC5252,#F237FE);
 }
-
 .PartOne{
 	margin-top: 100px;
 }
-
 .PartTwo{
 	height: 50px;
 	width: 150px;
@@ -15,11 +13,9 @@ body{
 .PartThree{
 	float: right;
 }
-
 .PartFour{
 	margin-top: 2%;
 }
-
 .PartFive{
 	margin-bottom: 1%;
 	float: right;

@@ -10,15 +10,13 @@ class StringType implements DataType
     {
         $config = new config();
         $client = $config->connect($server_id);
-        if (is_string($client)) {
+        if (is_string($client))
             return false;
-        }
 
         $client->set($key, $value);
 
-        if (is_null($expire) == false) {
+        if ( ! is_null($expire))
             $client->expire($key, $expire);
-        }
 
         return true;
     }

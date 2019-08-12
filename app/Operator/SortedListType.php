@@ -12,17 +12,14 @@ class SortedListType implements DataType
         $config = new config();
         $client = $config->connect($server_id);
 
-        if (is_string($client)) {
+        if (is_string($client))
             return false;
-        }
 
-        foreach ($value as $valKey => $val) {
+        foreach ($value as $valKey => $val)
             $client->zadd($key, 0, $val);
-        }
 
-        if (is_null($expire) == false) {
+        if ( ! is_null($expire))
             $client->expire($key, $expire);
-        }
 
         return true;
     }

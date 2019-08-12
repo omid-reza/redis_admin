@@ -1,7 +1,6 @@
 body{
  background-image: linear-gradient(to left,#FC5252,#F237FE);
 }
-
 .PartOne{
 	height: 50px;width: 150px;
 	font-size: 20px;
@@ -14,13 +13,11 @@ body{
 	display:flex;
 	justify-content: space-around;
 }
-
 .PartFour{
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 }
-
 .PartFive{
 	margin-bottom: 1%;
 }
@@ -30,7 +27,6 @@ body{
 .PartSeven{
 	text-decoration: none;
 }
-
 .partNine{
 	justify-content: space-between;
 	display: flex;

@@ -2,20 +2,14 @@
 
 namespace config;
 
-require 'vendor/autoload.php';
-use Predis\Autoloader;
 use Predis\Client;
-use Predis\Connection\ConnectionException;
+use Predis\Autoloader;
 use Symfony\Component\Yaml\Yaml;
+use Predis\Connection\ConnectionException;
 
-/**
- * @author Omid Reza
- */
 class config
 {
-    /**
-     *@var Predis\Client var to have connection
-     */
+
     private $client = null;
 
     public function __construct()
@@ -23,12 +17,10 @@ class config
         Autoloader::register();
     }
 
-    /**
-     * @method mixed connect to server
-     */
     public function connect($server_id)
     {
-        $options = null;
+        if ($this->server_not_exists($server_id))
+            return 'server does not exist';
         $options = [
             'parameters' => [
                 'password' => $this->getPassword($server_id),
@@ -36,32 +28,28 @@ class config
             ],
         ];
         if (is_string($this->getHost($server_id)) and is_int($this->getPort($server_id))) {
-            $params = ['scheme' => 'tcp', 'host'   => $this->getHost($server_id), 'port'   => $this->getPort($server_id)];
+            $params = [
+                'scheme' => 'tcp',
+                'host'   => $this->getHost($server_id),
+                'port'   => $this->getPort($server_id)
+            ];
             $this->setClient(new Client($params, $options));
-
             try {
                 $this->getClient()->connect();
                 return $this->getClient();
             } catch (ConnectionException $e) {
-                return "can't connect to this server !";
+                return $e->getMessage();
             }
         }
-
-        return 'host or port not set';
+        return 'invalid host and port type !';
     }
 
-    /**
-     * @return mixed
-     */
-    public function getHost($server_id):string
+    public function getHost($server_id)
     {
         return Yaml::parseFile('config/db.yaml')[$server_id]['host'];
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPort($server_id):int
+    public function getPort($server_id)
     {
         return Yaml::parseFile('config/db.yaml')[$server_id]['port'];
     }
@@ -71,9 +59,11 @@ class config
         return Yaml::parseFile('config/db.yaml')[$server_id]['password'];
     }
 
-    /**
-     * @method array|string get value(s) by key
-     */
+    public function server_not_exists($server_id):bool
+    {
+        return is_null($this->getHost($server_id)) || is_null($this->getPort($server_id));
+    }
+
     public function getValue($key)
     {
         switch ($this->getClient()->type($key)) {
@@ -92,23 +82,14 @@ class config
         }
     }
 
-    /**
-     * @return mixed
-     */
     public function getClient()
     {
         return $this->client;
     }
 
-    /**
-     * @param mixed $client
-     *
-     * @return self
-     */
     public function setClient($client)
     {
         $this->client = $client;
-
         return $this;
     }
 

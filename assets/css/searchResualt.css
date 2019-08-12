@@ -4,22 +4,18 @@ body{
 .partOne{
 	margin-top: 100px;
 }
-
 .partTwo{
 	height: 50px;
 	width: 150px;
 	font-size: 20px;
 	margin-bottom:10px;
 }
-
 .PartThree{
 	float: right;
 }
-
 .partFour{
 	text-decoration: none;
 }
-
 .partFive{
 	text-align:center;
 }

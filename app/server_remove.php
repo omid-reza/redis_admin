@@ -14,10 +14,10 @@ if (!isset($_GET['server'])) {
     }
     $current_server_id--;
     if ($_GET['server'] > $current_server_id) {
-        header('location:../select_server?error=invalid server id');
+        header('location:../?error=invalid server id');
     } else {
         $yaml = Yaml::dump($servers);
         file_put_contents('config/db.yaml', $yaml);
-        header('location:../select_server?message=server remove with id : '.$_GET['server']);
+        header('location:../?message=server remove with id : '.$_GET['server']);
     }
 }

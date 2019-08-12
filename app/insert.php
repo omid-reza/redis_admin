@@ -1,10 +1,10 @@
 <?php
 
-use Operator\HashType;
-use Operator\ListType;
 use Operator\SetType;
-use Operator\SortedListType;
+use Operator\ListType;
+use Operator\HashType;
 use Operator\StringType;
+use Operator\SortedListType;
 
 if (!isset($_POST['server'])) {
     echo 'Please set server_id in header !';
@@ -15,72 +15,62 @@ if (!isset($_POST['server'])) {
         case 'String':
             $key = $_POST['key'];
             $value = $_POST['value'][0];
-            if (isset($_POST['expire'])) {
-                $res = (StringType::insert($_POST['server'], $key, $value, $_POST['expire']));
-            } else {
+            if (isset($_POST['expire']))
+                $res = StringType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            else
                 $res = StringType::insert($_POST['server'], $key, $value);
-            }
-            if ($res == true) {
+            if ($res == true)
                 header('location:../keys?message=created&server='.$_POST['server']);
-            } else {
+            else
                 header('location:../keys?error=nuknow&server='.$_POST['server']);
-            }
             break;
         case 'Hashe':
             $key = $_POST['key'];
             $value = $_POST['value'];
-            if (isset($_POST['expire'])) {
+            if (isset($_POST['expire']))
                 $res = HashType::insert($_POST['server'], $key, $value, $_POST['expire']);
-            } else {
+            else
                 $res = HashType::insert($_POST['server'], $key, $value);
-            }
-            if ($res == true) {
+            if ($res == true)
                 header('location:../keys?message=created&server='.$_POST['server']);
-            } else {
+            else
                 header('location:../keys?error=nuknow&server='.$_POST['server']);
-            }
             break;
         case 'List':
             $key = $_POST['key'];
             $value = $_POST['value'];
-            if (isset($_POST['expire'])) {
+            if (isset($_POST['expire']))
                 $res = ListType::insert($_POST['server'], $key, $value, $_POST['expire']);
-            } else {
+            else
                 $res = ListType::insert($_POST['server'], $key, $value);
-            }
-            if ($res == true) {
+            if ($res == true)
                 header('location:../keys?message=created&server='.$_POST['server']);
-            } else {
+            else
                 header('location:../keys?error=nuknow&server='.$_POST['server']);
-            }
             break;
         case 'Set':
             $key = $_POST['key'];
             $value = $_POST['value'];
-            if (isset($_POST['expire'])) {
+            if (isset($_POST['expire']))
                 $res = SetType::insert($_POST['server'], $key, $value, $_POST['expire']);
-            } else {
+            else
                 $res = SetType::insert($_POST['server'], $key, $value);
-            }
-            if ($res == true) {
+            if ($res == true)
                 header('location:../keys?message=created&server='.$_POST['server']);
-            } else {
+            else
                 header('location:../keys?error=nuknow&server='.$_POST['server']);
-            }
             break;
         case 'Sorted List':
             $key = $_POST['key'];
             $value = $_POST['value'];
-            if (isset($_POST['expire'])) {
+            if (isset($_POST['expire']))
                 $res = SortedListType::insert($_POST['server'], $key, $value, $_POST['expire']);
-            } else {
+            else
                 $res = SortedListType::insert($_POST['server'], $key, $value);
-            }
-            if ($res == true) {
+            if ($res == true)
                 header('location:../keys?message=created&server='.$_POST['server']);
-            } else {
+            else
                 header('location:../keys?error=nuknow&server='.$_POST['server']);
-            }
             break;
     }
 } else {

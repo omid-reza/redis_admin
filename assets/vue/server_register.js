@@ -1,26 +1,25 @@
 new Vue({
         el: '#app',
         data: {
-          btn_password_text:"Use Password",
-          errors: [],
           host:"",
           port:"",
+          errors: [],
           password:"",
+          database:"",
           password_confirm:"",
-          database:""
+          btn_password_text:"Use Password"
         },
         methods:{
             checkForm: function (e) {
-              if (this.host && this.port) return true;
+              if (this.host) return true;
               
               this.errors = [];
               
-              if (!this.host) this.errors.push('host Field required');
-              if (!this.port) this.errors.push('port Field required.');
+              if (!this.host) this.errors.push('Host Field required');
               
               if (this.btn_password_text == "Don't Use Password"){
-                  if (this.password=='') this.errors.push("password Field can't be empty.");
-                  if (this.password_confirm=='') this.errors.push("password confirm Field can't be empty.");
+                  if (this.password=='') this.errors.push("Password Field can't be empty.");
+                  if (this.password_confirm=='') this.errors.push("Password Confirm Field can't be empty.");
               }
 
               if (this.password!=this.password_confirm) this.errors.push('password and password confirm should be same');
@@ -28,11 +27,7 @@ new Vue({
               e.preventDefault();
             },
             change_password_status(){
-              if (this.btn_password_text == 'Use Password'){
-                  this.btn_password_text = "Don't Use Password";
-              }else{
-                this.btn_password_text = "Use Password";
-              }
+              this.btn_password_text=((this.btn_password_text == 'Use Password')?"Don't Use Password":'Use Password');
             }
         }
 });
