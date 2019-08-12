@@ -28,6 +28,7 @@
   - see record detail
   - search for match keys
   - edit keys
+    -for just string type(add for all type soon)
   - delete keys
   - insert record
     - set expire time
@@ -64,7 +65,7 @@
 ### install manually
     
    #### clone project from github with this command :
-```php
+```
     git clone https://github.com/snip77/redis_admin.git
 ```
    #### install requirements with this command:
@@ -90,14 +91,14 @@
   #### set option port:
    You can set port like this:
 ```php
-php serve PORT_NUMBER
+   php serve PORT_NUMBER
 ``` 
   - Visit `localhost:PORT_NUMBER` in your browser
   
   For example 
  
  ```php
-php serve 2010
+   php serve 2010
 ``` 
   - Visit `localhost:2010` in your browser
   
