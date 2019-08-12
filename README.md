@@ -28,7 +28,7 @@
   - see record detail
   - search for match keys
   - edit keys
-    -for just string type(add for all type soon)
+    - for just string type(add for all type soon)
   - delete keys
   - insert record
     - set expire time
