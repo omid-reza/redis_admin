@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\Yaml\Yaml;
+use config\config;
 
 if (!isset($_POST['host'])) {
     header('location:../server_register?error=host field not set in request');
@@ -9,7 +10,7 @@ if (!isset($_POST['host'])) {
     $pass = null;
     $database = 0;
     $servers = [];
-    foreach (Yaml::parseFile('config/db.yaml') as $key => $value)
+    foreach (config::read_config_file() as $key => $value)
         array_push($servers, $value);
 
     if(isset($_POST['port']) && $_POST['port'] != '')
@@ -27,8 +28,6 @@ if (!isset($_POST['host'])) {
         'password'=> $pass,
         'database'=> $database, ]
     );
-
-    $yaml = Yaml::dump($servers);
-    file_put_contents('config/db.yaml', $yaml);
+    file_put_contents(config::$servers_file_path, Yaml::dump($servers));
     header('location:../?message=server registered');
 }

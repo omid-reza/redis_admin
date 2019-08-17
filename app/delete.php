@@ -1,6 +1,6 @@
 <?php
 use config\config;
-?>
+use language\language; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,9 +31,11 @@ use config\config;
     		<?php } elseif (is_null($config->getValue($_GET['key']))) { ?>
     			<div class="container jumbotron PartOne">
                     <span class="PartTwo btn btn-outline-danger">errors</span>
-                    <a href="../" class="btn btn-warning PartThree">Back</a>
+                    <a href="../" class="btn btn-warning PartThree">
+                      <?php echo language::get_string('Back'); ?>
+                    </a>
                     <div class="alert alert-danger" role="alert">
-                      No record with key <?php echo $_GET['key']; ?>
+                      <?php echo language::get_string('No record with key').' : '.$_GET['key']; ?>
                     </div>
                 </div>
             <?php } else {
@@ -41,11 +43,17 @@ use config\config;
                 <div class="container PartOne">
                     <div class="card bg-light mb-3" >
                       <div class="card-header">
-                        Deleted successfully
-                      <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                        <?php echo language::get_string('Deleted Successfully'); ?>
+                        <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">
+                            <?php echo language::get_string('Main Page'); ?>
+                        </a>
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">record with key <span style="color: red"><?php echo $_GET['key']; ?></span> Deleted</h5>
+                        <h5 class="card-title">
+                            <?php echo language::get_string('Record with key'); ?>
+                            <span style="color: red"><?php echo $_GET['key']; ?></span>
+                            <?php echo language::get_string('Deleted'); ?>
+                        </h5>
                       </div>
                     </div>
     			</div>

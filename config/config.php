@@ -9,7 +9,7 @@ use Predis\Connection\ConnectionException;
 
 class config
 {
-
+    public static $servers_file_path="config/servers.yml";
     private $client = null;
 
     public function __construct()
@@ -46,17 +46,17 @@ class config
 
     public function getHost($server_id)
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['host'];
+        return self::read_config_file()[$server_id]['host'];
     }
 
     public function getPort($server_id)
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['port'];
+        return self::read_config_file()[$server_id]['port'];
     }
 
     public function getPassword($server_id)
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['password'];
+        return self::read_config_file()[$server_id]['password'];
     }
 
     public function server_not_exists($server_id):bool
@@ -95,6 +95,10 @@ class config
 
     public function getDatabase($server_id):int
     {
-        return Yaml::parseFile('config/db.yaml')[$server_id]['database'];
+        return self::read_config_file()[$server_id]['database'];
+    }
+
+    public static function read_config_file(){
+        return Yaml::parseFile(self::$servers_file_path);
     }
 }

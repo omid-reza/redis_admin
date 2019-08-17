@@ -1,7 +1,8 @@
+<?php use language\language; ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Keys List - redis admin</title>
+        <title><?php echo language::get_string('Keys List'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/css/keys.css">
         <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
         <script type="text/javascript" src="assets/vue.js"></script>
@@ -46,19 +47,24 @@
                 <div class="container jumbotron PartTwo">
                     <div class="PartThree">
                         <div class="PartFour">
-                            <a href="../insertForm?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">Insert</a>
-                        <a href="../" class="btn btn-warning PartFive partEight">server lists</a>
-                        <a href="../searchForm?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">Search</a>
+                            <a href="../insertForm?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">
+                                <?php echo language::get_string('Insert'); ?>
+                            </a>
+                        <a href="../" class="btn btn-warning PartFive partEight">
+                            <?php echo language::get_string('Server Lists'); ?>
+                        </a>
+                        <a href="../searchForm?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">   <?php echo language::get_string('Search'); ?>
+                        </a>
 
                         </div>
                     </div>    
                     <div class="alert alert-primary partNine" role="alert">
                             <div><?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?></div>
-                            <div><?php echo 'Keys count : '.$key_count; ?></div>
-                            <div><?php echo 'database : '.$config->getDatabase($server_id); ?></div>
+                            <div><?php echo language::get_string('Keys Count').' : '.$key_count; ?></div>
+                            <div><?php echo language::get_string('DataBase').' : '.$config->getDatabase($server_id); ?></div>
                     </div>
                     <div class="alert alert-dark PartSix" role="alert">
-                            keys
+                        <?php echo language::get_string('Keys'); ?>
                     </div>
                 <?php
                 $pagedArray = array_chunk($client->keys('*'), 10, true);

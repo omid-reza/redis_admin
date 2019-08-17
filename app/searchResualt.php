@@ -1,10 +1,11 @@
 <?php
 use config\config;
+use language\language;
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>edit - redis admin</title>
+  	<title><?php echo language::get_string('Search Resualt'); ?></title>
       <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/searchResualt.css">
   </head>
@@ -38,15 +39,15 @@ use config\config;
               <div class="container jumbotron partOne">
                   <div class="card bg-light mb-3" >
                     <div class="card-header">
-                      Resualt for : <?php echo $_POST['key']?>
-                    <a href="../keys?server=<?php echo $_POST['server']; ?>" class="btn btn-warning PartThree">Main Page</a>
+                      <?php echo language::get_string('Resualt for').' : '.$_POST['key']?>
+                    <a href="../keys?server=<?php echo $_POST['server']; ?>" class="btn btn-warning PartThree">
+                      <?php echo language::get_string('Main Page'); ?>
+                    </a>
                     </div>
                     <?php if (count($client->keys('*'.$_POST['key'].'*'), 1) == 0) { ?>
-                      <a href="show?key=<?php echo $value?>" class="partFour">
-                          <div class="alert alert-warning partFive" role="alert">
-                              No match resualt !!
-                          </div>
-                      </a>
+                        <div class="alert alert-warning partFive" role="alert">
+                          <?php echo language::get_string('No match resualt !!'); ?>
+                        </div>
                   <?php
                     } else {
                         foreach ($client->keys('*'.$_POST['key'].'*') as $key => $value) {

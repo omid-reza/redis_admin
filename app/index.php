@@ -1,8 +1,8 @@
 <?php
 use Symfony\Component\Yaml\Yaml;
-
+use config\config;
 $path = 'select_server.php';
-$servers = Yaml::parseFile('config/db.yaml');
+$servers = config::read_config_file();
 if (sizeof($servers)==0)
 	$path = 'server_register.php';
 

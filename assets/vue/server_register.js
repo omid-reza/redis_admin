@@ -17,6 +17,7 @@ new Vue({
               
               if (!this.host) this.errors.push('Host Field required');
               
+              //TODO: should update(have bug)
               if (this.btn_password_text == "Don't Use Password"){
                   if (this.password=='') this.errors.push("Password Field can't be empty.");
                   if (this.password_confirm=='') this.errors.push("Password Confirm Field can't be empty.");

@@ -1,0 +1,41 @@
+Key: 'کلید'
+Value: "مقدار"
+Save: "ذخیره"
+Keys: 'مقادیر'
+Host: "هاست"
+Port: "پورت"
+Remove: 'حذف'
+Delete: "حذف"
+Second: "ثانیه"
+Type: 'نوع داده'
+Edit: 'ویرایش'
+Insert: "افزودن"
+Search: "جستجو"
+Servers: 'سرور ها'
+Value(s): 'مقدار(ها)'
+Password: "رمز عبور"
+DataBase: "پایگاه داده"
+Add server: 'افزودن سرور'
+Keys List: "لیست مقادیر"
+Main Page: "صفحه اصلی"
+Keys Count : "تعداد کلید ها"
+Select Server: "انتخاب سرور"
+Add Value: "افزودن مقدار جدید"
+Server Lists: "لیست  سرور ها"
+Search Resualt: "نتیجه جستجو"
+Resualt for: "نتیج برای عبارت"
+Confirm Password: "تکرار رمز عبور"
+Expire In: 'منقضی میشود پس از '
+Use Password: "استفاده از رمز عبور"
+Key To Search: "عبارت مورد جستجو"
+Register New Server: "افزودن سرور جدید"
+No expire time .: 'تاریخ انقضایی ندارد'
+Expire After (Second): 'منقی شود پس از(ثانیه)'
+No match resualt !!: "عبارت موردنظر  یافت نشد"
+Default port is 6379: "پورت پیش فرض 6379 می باشد"
+Default database is 0: "پایگاه داده پیش فرض 0 می باشد"
+No record with key: "هیچ عبارتی موجود نیست با کلید "
+Back: 'بازگشت'
+Deleted Successfully: "با موفقیت حذف شد"
+Record with key: 'عبارت با کلید '
+Deleted: 'حذف شد'
