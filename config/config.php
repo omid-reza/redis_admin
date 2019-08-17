@@ -6,6 +6,7 @@ use Predis\Client;
 use Predis\Autoloader;
 use Symfony\Component\Yaml\Yaml;
 use Predis\Connection\ConnectionException;
+use Symfony\Component\Yaml\Exception\ParseException;
 
 class config
 {
@@ -99,6 +100,10 @@ class config
     }
 
     public static function read_config_file(){
-        return Yaml::parseFile(self::$servers_file_path);
+        try{
+            return Yaml::parseFile(self::$servers_file_path);
+        }catch(ParseException $e){
+            file_put_contents(config::$servers_file_path, Yaml::dump(null));
+        }
     }
 }

@@ -68,7 +68,7 @@
                             <div><?php echo language::get_string('DataBase').' : '.$config->getDatabase($server_id); ?></div>
                     </div>
                     <div class="alert alert-dark PartSix" role="alert">
-                        <?php echo language::get_string('Keys'); ?>
+                        <?php echo language::get_string(($client->dbsize()==0)?'No Key':'Keys');?>
                     </div>
                 <?php
                 $pagedArray = array_chunk($client->keys('*'), 10, true);

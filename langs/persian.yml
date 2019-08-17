@@ -19,6 +19,7 @@ Value(s): 'مقدار(ها)'
 Deleted: 'حذف شد'
 Password: "رمز عبور"
 DataBase: "پایگاه داده"
+No Key: 'مقداری نیست'
 Add server: 'افزودن سرور'
 Keys List: "لیست مقادیر"
 Main Page: "صفحه اصلی"
