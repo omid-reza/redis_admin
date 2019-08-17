@@ -74,5 +74,5 @@ if (!isset($_POST['server'])) {
             break;
     }
 } else {
-    header('location:../index?error=paramiter mising');
+    header('location:../index?error=prameter mising');
 }

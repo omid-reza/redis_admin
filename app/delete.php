@@ -4,7 +4,7 @@ use language\language; ?>
 <!DOCTYPE html>
 <html>
     <head>
-    	<title>delete - redis admin</title>
+    	<title><?php echo language::get_string('Delete'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/css/delete.css">
         <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
     </head>
@@ -14,7 +14,9 @@ use language\language; ?>
             if (!isset($_GET['server'])) {
                 ?>
                 <div class="container jumbotron">
-                    <span class="btn btn-outline-danger">Errors</span>
+                    <span class="btn btn-outline-danger">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                     Please set server_id in header !
                 </div>
@@ -22,7 +24,9 @@ use language\language; ?>
                 </div>
             <?php } elseif (is_string($client = $config->connect($_GET['server']))) { ?>
                 <div class="container jumbotron PartOne">
-                    <span class="btn btn-outline-danger PartTwo">errors</span>
+                    <span class="btn btn-outline-danger PartTwo">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                       <?php echo $client ?>
                     </div>
@@ -30,7 +34,9 @@ use language\language; ?>
 
     		<?php } elseif (is_null($config->getValue($_GET['key']))) { ?>
     			<div class="container jumbotron PartOne">
-                    <span class="PartTwo btn btn-outline-danger">errors</span>
+                    <span class="PartTwo btn btn-outline-danger">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <a href="../" class="btn btn-warning PartThree">
                       <?php echo language::get_string('Back'); ?>
                     </a>

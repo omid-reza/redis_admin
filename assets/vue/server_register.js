@@ -11,20 +11,17 @@ new Vue({
         },
         methods:{
             checkForm: function (e) {
-              if (this.host) return true;
-              
               this.errors = [];
               
               if (!this.host) this.errors.push('Host Field required');
               
-              //TODO: should update(have bug)
-              if (this.btn_password_text == "Don't Use Password"){
-                  if (this.password=='') this.errors.push("Password Field can't be empty.");
-                  if (this.password_confirm=='') this.errors.push("Password Confirm Field can't be empty.");
-              }
-
-              if (this.password!=this.password_confirm) this.errors.push('password and password confirm should be same');
               
+              if (this.btn_password_text == "Don't Use Password"){
+                  if (!this.password) this.errors.push("Password Field can't be empty.");
+                  if (!this.password_confirm) this.errors.push("Password Confirm Field can't be empty.");
+              }
+              if (this.password!=this.password_confirm) this.errors.push('password and password confirm should be same');
+              if (!this.errors.length) return true;
               e.preventDefault();
             },
             change_password_status(){

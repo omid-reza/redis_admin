@@ -9,15 +9,20 @@
   <body>
     <?php if (!isset($_GET['server'])) { ?>
               <div class="container jumbotron PartTwo">
-                  <span class="btn btn-outline-danger PartOne">Errors</span>
+                  <span class="btn btn-outline-danger PartOne">
+                    <?php echo language::get_string('Errors'); ?>
+                  </span>
                   <div class="alert alert-danger" role="alert">
                     Please set server_id in header !
                   </div>
               </div>
       <?php } else { ?>
         <div class="container PartSeven" id="app">
+          <div v-if="errors.length" class="container">
+            <div class="alert alert-warning" v-for="error in errors" v-text="error"></div>
+          </div>
           <div class=" container card text-white bg-dark mb-3" >
-            <form method="post" action="../insert">
+            <form method="post" action="../insert" @submit="checkForm">
               <div class="card-header">
                 <?php echo language::get_string('Insert'); ?>
                 <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartOne">
@@ -49,12 +54,15 @@
                 </div>
               </div>
                 <div class="form-group row PartThree" v-if="type != ''" v-for="index in valuecount">
-                <label for="key" class="col-sm-2 col-form-label"><?php echo language::get_string('Value'); ?></label>
-                <div class="col-sm-10">
-                  <input type="text"  width="100%" class="form-control" name="value[]">
-                  <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
+                  <label for="key" class="col-sm-2 col-form-label">
+                    <?php echo language::get_string('Value'); ?>
+                      
+                    </label>
+                  <div class="col-sm-10">
+                    <input v-model="values[index-1]" type="text"  width="100%" class="form-control" name="value[]">
+                    <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
+                  </div>
                 </div>
-              </div>
                 <button v-if="type!=''" type="submit" class="btn btn-success PartFour">
                   <?php echo language::get_string('Save'); ?>
                 </button>

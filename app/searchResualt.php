@@ -15,21 +15,27 @@ use language\language;
           if (!isset($_POST['server'])) {
               ?>
               <div class="container jumbotron PartTwo">
-                  <span class="btn btn-outline-danger PartOne">Errors</span>
+                  <span class="btn btn-outline-danger PartOne">
+                    <?php echo language::get_string('Errors'); ?>
+                  </span>
                   <div class="alert alert-danger" role="alert">
                     Please set server_id in header !
                   </div>
               </div>
           <?php } elseif (is_string($client = $config->connect($_POST['server']))) { ?>
               <div class="container jumbotron PartTwo">
-                  <span class="btn btn-outline-danger PartOne">Errors</span>
+                  <span class="btn btn-outline-danger PartOne">
+                    <?php echo language::get_string('Errors'); ?>
+                  </span>
                   <div class="alert alert-danger" role="alert">
                     <?php echo $client ?>
                   </div>
               </div>
           <?php } elseif (!isset($_POST['key'])) { ?>
               <div class="container jumbotron partOne">
-                  <span class="btn btn-outline-danger partTwo">errors</span>
+                  <span class="btn btn-outline-danger partTwo">
+                    <?php echo language::get_string('Errors'); ?>
+                  </span>
                   <a href="../" class="btn btn-warning PartThree">Back</a>
                   <div class="alert alert-danger" role="alert">
                     please set key in header ! ! !

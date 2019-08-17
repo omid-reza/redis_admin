@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<title>show - redis admin</title>
+    	<title><?php echo language::get_string('Show'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/show.css">
     </head>
@@ -13,21 +13,27 @@
             if (!isset($_GET['server'])) {
                 ?>
                 <div class="container jumbotron PartTwo">
-                    <span class="btn btn-outline-danger PartOne">Errors</span>
+                    <span class="btn btn-outline-danger PartOne">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                       Please set server_id in header !
                     </div>
                 </div>
             <?php } elseif (is_string($client = $config->connect($_GET['server']))) { ?>
                 <div class="container jumbotron PartTwo">
-                    <span id="errorsPart" class="btn btn-outline-danger">errors</span>
+                    <span id="errorsPart" class="btn btn-outline-danger">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                       <?php echo $client ?>
                     </div>
                 </div>
             <?php } elseif (!isset($_GET['key'])) { ?>
                 <div class="container jumbotron PartTwo">
-                    <span class="btn btn-outline-danger PartOne">errors</span>
+                    <span class="btn btn-outline-danger PartOne">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <a class="PartThree" href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">
                         <?php echo language::get_string('Main page'); ?>        
                     </a>
@@ -36,7 +42,9 @@
                     </div>
            <?php } elseif (is_null($config->getValue($_GET['key']))) { ?>
     			<div class="container jumbotron PartTwo">
-                    <span class="btn btn-outline-danger PartOne">errors</span>
+                    <span class="btn btn-outline-danger PartOne">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <a class="PartThree" href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning">
                         <?php echo language::get_string('Main Page'); ?> 
                     </a>

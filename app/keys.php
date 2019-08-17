@@ -26,7 +26,9 @@
             if (!isset($_GET['server'])) {
                 ?>
                 <div class="container jumbotron PartTwo">
-                    <span class="btn btn-outline-danger PartOne">Errors</span>
+                    <span class="btn btn-outline-danger PartOne">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                       Please set server_id in header !
                     </div>
@@ -35,7 +37,9 @@
             } elseif (is_string($client = $config->connect($_GET['server']))) {
                 ?>
                 <div class="container jumbotron PartTwo">
-                    <span class="btn btn-outline-danger PartOne">Errors</span>
+                    <span class="btn btn-outline-danger PartOne">
+                        <?php echo language::get_string('Errors'); ?>
+                    </span>
                     <div class="alert alert-danger" role="alert">
                       <?php echo $client ?>
                     </div>
