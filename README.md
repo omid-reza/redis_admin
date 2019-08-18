@@ -23,11 +23,10 @@
     </a>
 </p>
 
-## Features :
-  - see all keys
-  - see record detail
-  - search for match keys
-  - edit keys
-  - delete keys
-  - insert record
-    - set expire time
+Topics:
+* [Requirments](https://github.com/snip77/redis_admin/wiki/Requirments)
+* [Installation](https://github.com/snip77/redis_admin/wiki/Installation)
+* [Server Configurations](https://github.com/snip77/redis_admin/wiki/Server-Configurations)
+* [SetUp](https://github.com/snip77/redis_admin/wiki/SetUp)
+* [Features](https://github.com/snip77/redis_admin/wiki/Features)
+* [Localization](https://github.com/snip77/redis_admin/wiki/Localization)
