@@ -2,13 +2,13 @@ new Vue({
         el: '#app',
         data: {
           key : "",
-          errors:[],
-          valuecount:1,
-          values:[],
-          addedExpire:false,
-          expireIn:null,
           type: "",
-          expireKeyText:"Add Expire Time",
+          errors:[],
+          values:[],
+          valuecount:1,
+          expireIn:null,
+          addedExpire:false,
+          expireKeyText:"Add Expire Time"
         },
         methods:{
             checkForm: function (e) {

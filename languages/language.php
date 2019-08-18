@@ -1,8 +1,8 @@
 <?php
 namespace language;
 
-use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Yaml\Exception\ParseException;
 
 class language{
 	static function get_string($key){
@@ -16,7 +16,7 @@ class language{
 
 	static function get_language(){
 		try{
-			return Yaml::parseFile('config/setting.yml')['language'];	
+			return Yaml::parseFile('config/setting.yml')['language'];
 		}catch(ParseException $e){
 			return 'english';
 		}
@@ -24,6 +24,6 @@ class language{
 
 	static function read_lang_file()
 	{
-		return Yaml::parseFile('langs/'.self::get_language().'.yml');
+		return Yaml::parseFile('languages/'.self::get_language().'.yml');
 	}
 }

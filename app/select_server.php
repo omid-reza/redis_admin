@@ -12,7 +12,7 @@
     <head>
         <title><?php echo language::get_string('Select Server'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/css/select_server.css">
-        <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>
         <?php if (isset($_GET['error'])) { ?>

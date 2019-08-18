@@ -23,8 +23,8 @@
         "psr-4": {
             "Operator\\": "app/Operator/",
             "config\\": "config/",
-            "Route\\": "Routing",
-            "language\\":"langs/"
+            "Route\\": "Routing/",
+            "language\\":"languages/"
         }
     },
     "config": {

@@ -4,8 +4,7 @@
     <head>
         <title><?php echo language::get_string('Keys List'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/css/keys.css">
-        <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-        <script type="text/javascript" src="assets/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>
         <?php if (isset($_GET['error'])) { ?>
