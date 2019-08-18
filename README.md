@@ -23,7 +23,6 @@
     </a>
 </p>
 
-Topics:
 * [Requirments](https://github.com/snip77/redis_admin/wiki/Requirments)
 * [Installation](https://github.com/snip77/redis_admin/wiki/Installation)
 * [Server Configurations](https://github.com/snip77/redis_admin/wiki/Server-Configurations)
