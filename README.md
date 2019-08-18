@@ -12,9 +12,6 @@
     <a href="https://php.net/" target="_blank">
         <img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg">
     </a>
-    <a href="https://http://redis.io/" target="_blank">
-        <img alt="Minimum redis version" src="https://img.shields.io/badge/redis-%3E%3D%201.0.0-FC5252.svg">
-    </a>
     <a href="https://www.codefactor.io/repository/github/snip77/redis_admin">
         <img src="https://www.codefactor.io/repository/github/snip77/redis_admin/badge" />
     </a>
