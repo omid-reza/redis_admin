@@ -11,16 +11,14 @@ use language\language; ?>
     <body>
     	<?php
             $config = new config();
-            if (!isset($_GET['server'])) {
-                ?>
+            if (!isset($_GET['server'])) { ?>
                 <div class="container jumbotron">
                     <span class="btn btn-outline-danger">
                         <?php echo language::get_string('Errors'); ?>
                     </span>
                     <div class="alert alert-danger" role="alert">
-                    Please set server_id in header !
+                    <?php  echo language::get_string('Please set server_id in header !'); ?>
                 </div>
-                      
                 </div>
             <?php } elseif (is_string($client = $config->connect($_GET['server']))) { ?>
                 <div class="container jumbotron PartOne">
@@ -31,7 +29,6 @@ use language\language; ?>
                       <?php echo $client ?>
                     </div>
                 </div>
-
     		<?php } elseif (is_null($config->getValue($_GET['key']))) { ?>
     			<div class="container jumbotron PartOne">
                     <span class="PartTwo btn btn-outline-danger">
@@ -65,6 +62,5 @@ use language\language; ?>
     			</div>
             <?php } ?>
             </div>
-            
     </body>
 </html>

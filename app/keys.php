@@ -1,4 +1,6 @@
-<?php use language\language; ?>
+<?php
+use language\language;
+use config\config; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,16 +13,12 @@
             <div class="alert alert-danger" role="alert">
                   <?php echo $_GET['error']; ?>
             </div>
-        <?php
-        }
-        if (isset($_GET['message'])) {
-            ?>
+        <?php } if (isset($_GET['message'])) { ?>
             <div class="alert alert-success" role="alert">
                   <?php echo $_GET['message']; ?>
             </div>
         <?php
-        }
-            use config\config;
+            }
             $config = new config();
             if (!isset($_GET['server'])) {
                 ?>
@@ -29,12 +27,10 @@
                         <?php echo language::get_string('Errors'); ?>
                     </span>
                     <div class="alert alert-danger" role="alert">
-                      Please set server_id in header !
+                      <?php  echo language::get_string('Please set server_id in header !'); ?>
                     </div>
                 </div>
-            <?php
-            } elseif (is_string($client = $config->connect($_GET['server']))) {
-                ?>
+            <?php } elseif (is_string($client = $config->connect($_GET['server']))) { ?>
                 <div class="container jumbotron PartTwo">
                     <span class="btn btn-outline-danger PartOne">
                         <?php echo language::get_string('Errors'); ?>
@@ -62,9 +58,15 @@
                         </div>
                     </div>    
                     <div class="alert alert-primary partNine" role="alert">
-                            <div><?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?></div>
-                            <div><?php echo language::get_string('Keys Count').' : '.$key_count; ?></div>
-                            <div><?php echo language::get_string('DataBase').' : '.$config->getDatabase($server_id); ?></div>
+                            <div>
+                                <?php echo $config->getHost($server_id).':'.$config->getPort($server_id); ?>        
+                            </div>
+                            <div>
+                                <?php echo language::get_string('Keys Count').' : '.$key_count; ?>
+                            </div>
+                            <div>
+                                <?php echo language::get_string('DataBase').' : '.$config->getDatabase($server_id);?>
+                            </div>
                     </div>
                     <div class="alert alert-dark PartSix" role="alert">
                         <?php echo language::get_string(($client->dbsize()==0)?'No Key':'Keys');?>
@@ -72,7 +74,6 @@
                 <?php
                 $pagedArray = array_chunk($client->keys('*'), 10, true);
                 $page = 1;
-
                 if (isset($_GET['page']))
                     $page = (int) $_GET['page'];
 

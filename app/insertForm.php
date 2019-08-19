@@ -13,7 +13,7 @@
                     <?php echo language::get_string('Errors'); ?>
                   </span>
                   <div class="alert alert-danger" role="alert">
-                    Please set server_id in header !
+                    <?php  echo language::get_string('Please set server_id in header !'); ?>
                   </div>
               </div>
       <?php } else { ?>
@@ -30,12 +30,12 @@
                 </a>
               </div>
               <div class="form-group PartTwo">
-                <label for="exampleFormControlSelect1"><?php echo language::get_string('Type'); ?></label>
-                <select name="type" class="form-control" id="Type" v-model="type" @change="typeChange()">
-                  <option>String</option>
-                  <option>Hashe</option>
+                <label><?php echo language::get_string('Type'); ?></label>
+                <select name="type" class="form-control" v-model="type" @change="typeChange()">
                   <option>Set</option>
                   <option>List</option>
+                  <option>String</option>
+                  <option>Hashe</option>
                   <option>Sorted List</option>
                 </select>
               </div>
@@ -56,8 +56,7 @@
                 <div class="form-group row PartThree" v-if="type != ''" v-for="index in valuecount">
                   <label for="key" class="col-sm-2 col-form-label">
                     <?php echo language::get_string('Value'); ?>
-                      
-                    </label>
+                  </label>
                   <div class="col-sm-10">
                     <input v-model="values[index-1]" type="text"  width="100%" class="form-control" name="value[]">
                     <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">

@@ -6,7 +6,7 @@ use config\config;
 
 class SetType implements DataType
 {
-    public static function insert($server_id, $key, $value, $expire = null)
+    public static function insert($server_id, $key, $values, $expire = null)
     {
         $config = new config();
         $client = $config->connect($server_id);
@@ -14,8 +14,8 @@ class SetType implements DataType
         if (is_string($client))
             return false;
 
-        foreach ($value as $valKey => $val)
-            $client->sadd($key, $val);
+        foreach ($values as $valKey => $value)
+            $client->sadd($key, $value);
 
         if ( ! is_null($expire))
             $client->expire($key, $expire);

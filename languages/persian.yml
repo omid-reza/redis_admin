@@ -1,47 +1,54 @@
+Name: 'نام'
 Key: 'کلید'
-Value: "مقدار"
-Save: "ذخیره"
+Value: 'مقدار'
+Save: 'ذخیره'
 Keys: 'مقادیر'
-Host: "هاست"
-Port: "پورت"
+Host: 'هاست'
+Port: 'پورت'
 Remove: 'حذف'
-Delete: "حذف"
+Delete: 'حذف'
 Show: 'نمایش'
-Second: "ثانیه"
+Second: 'ثانیه'
 Type: 'نوع داده'
 Errors: 'خطا ها'
 Edit: 'ویرایش'
-Insert: "افزودن"
-Search: "جستجو"
+Insert: 'افزودن'
+Search: 'جستجو'
 Back: 'بازگشت'
 Servers: 'سرور ها'
 Value(s): 'مقدار(ها)'
 Deleted: 'حذف شد'
-Password: "رمز عبور"
-DataBase: "پایگاه داده"
+Password: 'رمز عبور'
+Created: 'ساخته شد'
+DataBase: 'پایگاه داده'
 No Key: 'مقداری نیست'
 Add server: 'افزودن سرور'
-Keys List: "لیست مقادیر"
-Main Page: "صفحه اصلی"
-Keys Count : "تعداد کلید ها"
+Keys List: 'لیست مقادیر'
+Main Page: 'صفحه اصلی'
+Keys Count : 'تعداد کلید ها'
 View Record: 'مشاهده عبارت'
 Updated: 'به روز رسانی  شد'
-Select Server: "انتخاب سرور"
+Select Server: 'انتخاب سرور'
 Edit Result: 'نتیجه ویرایش'
-Add Value: "افزودن مقدار جدید"
-Server Lists: "لیست  سرور ها"
-Search Resualt: "نتیجه جستجو"
-Resualt for: "نتیج برای عبارت"
-Confirm Password: "تکرار رمز عبور"
+Add Value: 'افزودن مقدار جدید'
+Server Lists: 'لیست  سرور ها'
+Search Resualt: 'نتیجه جستجو'
+Resualt for: 'نتیج برای عبارت'
+Confirm Password: 'تکرار رمز عبور'
 Record with key: 'عبارت با کلید '
+server registered: 'سرور ذخیر شد'
 Expire In: 'منقضی میشود پس از '
-Use Password: "استفاده از رمز عبور"
-Key To Search: "عبارت مورد جستجو"
-Register New Server: "افزودن سرور جدید"
+Use Password: 'استفاده از رمز عبور'
+Key To Search: 'عبارت مورد جستجو'
+Register New Server: 'افزودن سرور جدید'
 No expire time .: 'تاریخ انقضایی ندارد'
-Deleted Successfully: "با موفقیت حذف شد"
+Deleted Successfully: 'با موفقیت حذف شد'
+invalid server id: 'شماره سرور معتبر نیست'
+server remove with name: 'سرور حذف شد با نام'
 Expire After (Second): 'منقی شود پس از(ثانیه)'
-No match resualt !!: "عبارت موردنظر  یافت نشد"
-Default port is 6379: "پورت پیش فرض 6379 می باشد"
-No record with key: "هیچ عبارتی موجود نیست با کلید "
-Default database is 0: "پایگاه داده پیش فرض 0 می باشد"
+No match resualt !!: 'عبارت موردنظر  یافت نشد'
+server remove with id : 'سرور حذف شد با  شماره '
+Default port is 6379: 'پورت پیش فرض 6379 می باشد'
+No record with key: 'هیچ عبارتی موجود نیست با کلید '
+Default database is 0: 'پایگاه داده پیش فرض 0 می باشد'
+Please set server_id in header !: 'شماره سرور را در آدرس وارد کنید !'

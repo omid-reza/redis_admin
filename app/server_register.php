@@ -85,5 +85,5 @@
         </div>
   </body>
   <script src="assets/vue/vue.js"></script>
-  <script src="assets/vue/server_register.js"></script>
+  <script src="assets/vue/serverRegister.js"></script>
 </html>

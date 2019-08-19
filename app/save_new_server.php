@@ -2,6 +2,7 @@
 
 use Symfony\Component\Yaml\Yaml;
 use config\config;
+use language\language;
 
 if ( ! isset($_POST['host'])) {
     header('location:../server_register?error=host field not set in request');
@@ -10,10 +11,8 @@ if ( ! isset($_POST['host'])) {
     $port=6379;
     $pass = null;
     $database = 0;
-    $servers = [];
-    $host=$_POST['host'];
-    foreach (config::read_config_file() as $key => $value)
-        array_push($servers, $value);
+    $host = $_POST['host'];
+    $servers = config::read_config_file();
 
     if(isset($_POST['port']) && $_POST['port'] != '')
         $port= (int) $_POST['port'];
@@ -36,5 +35,5 @@ if ( ! isset($_POST['host'])) {
         ]
     );
     file_put_contents(config::$servers_file_path, Yaml::dump($servers));
-    header('location:../?message=server registered');
+    header('location:../?message='.language::get_string('server registered'));
 }

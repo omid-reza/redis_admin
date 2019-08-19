@@ -13,7 +13,7 @@
                     <?php echo language::get_string('Errors'); ?>
                   </span>
                   <div class="alert alert-danger" role="alert">
-                    Please set server_id in header !
+                    <?php  echo language::get_string('Please set server_id in header !'); ?>
                   </div>
               </div>
       <?php } else { ?>

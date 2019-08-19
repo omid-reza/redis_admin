@@ -7,7 +7,7 @@ use config\config;
 
 class SortedListType implements DataType
 {
-    public static function insert($server_id, $key, $value, $expire = null)
+    public static function insert($server_id, $key, $values, $expire = null)
     {
         $config = new config();
         $client = $config->connect($server_id);
@@ -15,8 +15,8 @@ class SortedListType implements DataType
         if (is_string($client))
             return false;
 
-        foreach ($value as $valKey => $val)
-            $client->zadd($key, 0, $val);
+        foreach ($values as $valKey => $value)
+            $client->zadd($key, 0, $value);
 
         if ( ! is_null($expire))
             $client->expire($key, $expire);

@@ -19,7 +19,7 @@ use language\language;
                     <?php echo language::get_string('Errors'); ?>
                   </span>
                   <div class="alert alert-danger" role="alert">
-                    Please set server_id in header !
+                    <?php  echo language::get_string('Please set server_id in header !'); ?>
                   </div>
               </div>
           <?php } elseif (is_string($client = $config->connect($_POST['server']))) { ?>
@@ -54,10 +54,7 @@ use language\language;
                         <div class="alert alert-warning partFive" role="alert">
                           <?php echo language::get_string('No match resualt !!'); ?>
                         </div>
-                  <?php
-                    } else {
-                        foreach ($client->keys('*'.$_POST['key'].'*') as $key => $value) {
-                            ?>
+                  <?php } else { foreach ($client->keys('*'.$_POST['key'].'*') as $key => $value) { ?>
                               <a href="show?server=<?php echo $_POST['server'] ?>&key=<?php echo $value; ?>" class="partFour">
                                   <div class="alert alert-secondary partFive" role="alert">
                                           <?php echo $value; ?>

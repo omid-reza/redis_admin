@@ -17,7 +17,7 @@
                         <?php echo language::get_string('Errors'); ?>
                     </span>
                     <div class="alert alert-danger" role="alert">
-                      Please set server_id in header !
+                      <?php  echo language::get_string('Please set server_id in header !'); ?>
                     </div>
                 </div>
             <?php } elseif (is_string($client = $config->connect($_GET['server']))) { ?>
@@ -38,7 +38,7 @@
                         <?php echo language::get_string('Main page'); ?>        
                     </a>
                     <div class="alert alert-danger" role="alert">
-                      please set key in header ! ! !
+                      <?php echo language::get_string('Please set server_id in header !'); ?>
                     </div>
            <?php } elseif (is_null($config->getValue($_GET['key']))) { ?>
     			<div class="container jumbotron PartTwo">
@@ -70,11 +70,16 @@
                         <?php } ?>
                       </div>
     				  <div class="card-body">
-                        <h5 class="card-title"><?php echo language::get_string('Key').' : '.$_GET['key']; ?></h5>
+                        <h5 class="card-title">
+                            <?php echo language::get_string('Key').' : '.$_GET['key']; ?>        
+                        </h5>
                         <br>
-                        <h5 class="card-title"><?php echo language::get_string('Value(s)'); ?>  :</h5>
-                        <?php $counter = 0 ?>
-                        <?php foreach ((array) $config->getValue($_GET['key']) as $k => $val) {
+                        <h5 class="card-title">
+                            <?php echo language::get_string('Value(s)'); ?>  :
+                        </h5>
+                        <?php
+                        $counter = 0;
+                        foreach ((array) $config->getValue($_GET['key']) as $key => $val) {
                             $counter++; ?>
                             <h5 class="card-title container"><?php echo (string) ($counter).' ) '.$val; ?></h5>
                         <?php } ?>

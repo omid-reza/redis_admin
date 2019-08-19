@@ -1,29 +1,23 @@
 <?php
 
-use Symfony\Component\Yaml\Yaml;
 use config\config;
+use language\language;
+use Symfony\Component\Yaml\Yaml;
 
 $name=null;
 if (!isset($_GET['server']))
-    return header('location:../select_server?error=please set server Id');
-$servers = [];
+    return header('location:../select_server?error='.language::get_string('Please set server_id in header !'));
 $current_server_id = 0;
-foreach (config::read_config_file() as $key => $value) {
-    if ($current_server_id == $_GET['server']){
-        if ( ! is_null($value['name']))
-            $name=$value['name'];
-    }else{
-        array_push($servers, $value);
-    }
-    $current_server_id++;
-}
-$current_server_id--;
-if ($_GET['server'] > $current_server_id) {
-    header('location:../?error=invalid server id');
-} else {
-    file_put_contents(config::$servers_file_path, Yaml::dump($servers));
+$pervious_servers=config::read_config_file();
+if (array_key_exists($_GET['server'], $pervious_servers)) {
+    if ( ! is_null($pervious_servers[$_GET['server']]['name']))
+        $name=$pervious_servers[$_GET['server']]['name'];
+    unset($pervious_servers[$_GET['server']]);
+    file_put_contents(config::$servers_file_path, Yaml::dump($pervious_servers));
     if (is_null($name))
-        header('location:../?message=server remove with id : '.$_GET['server']);
+        header('location:../?message='.language::get_string('server remove with id').' : '.$_GET['server']);
     else
-        header('location:../?message=server remove with name : '.$name);
+        header('location:../?message='.language::get_string('server remove with name').' : '.$name);    
+}else{
+    header('location:../?error='.language::get_string('invalid server id'));
 }
