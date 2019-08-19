@@ -1,5 +1,4 @@
 <?php
-
     use config\config;
     use language\language;
     use Symfony\Component\Yaml\Yaml;
@@ -32,9 +31,13 @@
     	   </div>
            <?php foreach ($servers as $key => $value) { ?>
     		  <div class="alert alert-success PartSix server" role="alert">
-    			<?php echo $value['host'].':'.$value['port']; ?>
-                <a class="btn btn-danger remove PartThree" href="../server_remove?server=<?php echo $key; ?>"> <?php echo language::get_string('Remove'); ?> </a>
-                <a class="btn btn-dark keys PartThree" href="../keys?server=<?php echo $key; ?>"><?php echo language::get_string('Keys'); ?> </a>
+    			<?php echo is_null($value['name'])?($value['host'].':'.$value['port']):$value['name']; ?>
+                <a class="btn btn-danger remove PartThree" href="../server_remove?server=<?php echo $key; ?>">
+                    <?php echo language::get_string('Remove'); ?>
+                </a>
+                <a class="btn btn-dark keys PartThree" href="../keys?server=<?php echo $key; ?>">
+                    <?php echo language::get_string('Keys'); ?>
+                </a>
     	   	   </div>
            <?php } ?>
     	</div>
