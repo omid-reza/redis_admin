@@ -18,8 +18,8 @@
               </div>
       <?php } else { ?>
         <div class="container PartSeven" id="app">
-          <div assets/vue/vue.jsif="errors.length" class="container">
-            <div class="alert alert-warning" assets/vue/vue.jsfor="error in errors" assets/vue/vue.jstext="error"></div>
+          <div sif="errors.length" class="container">
+            <div class="alert alert-warning" v-for="error in errors" v-text="error"></div>
           </div>
           <div class=" container card text-white bg-dark mb-3" >
             <form method="post" action="../insert" @submit="checkForm">
@@ -31,7 +31,7 @@
               </div>
               <div class="form-group PartTwo">
                 <label for="exampleFormControlSelect1"><?php echo language::get_string('Type'); ?></label>
-                <select name="type" class="form-control" id="Type" assets/vue/vue.jsmodel="type" @change="typeChange()">
+                <select name="type" class="form-control" id="Type" v-model="type" @change="typeChange()">
                   <option>String</option>
                   <option>Hashe</option>
                   <option>Set</option>
@@ -39,43 +39,43 @@
                   <option>Sorted List</option>
                 </select>
               </div>
-              <div class="form-group row PartThree" assets/vue/vue.jsif="type != '' && addedExpire == true">
+              <div class="form-group row PartThree" v-if="type != '' && addedExpire == true">
                 <label for="key" class="col-sm-2 col-form-label">
                   <?php echo language::get_string('Expire After (Second)'); ?>
                 </label>
                 <div class="col-sm-10">
-                  <input assets/vue/vue.jsmodel="expireIn" type="number"  width="100%" class="form-control" name="expire">
+                  <input v-model="expireIn" type="number"  width="100%" class="form-control" name="expire">
                 </div>
               </div>
-              <div class="form-group row PartThree" assets/vue/vue.jsif="type != ''">
+              <div class="form-group row PartThree" v-if="type != ''">
                 <label for="key" class="col-sm-2 col-form-label"><?php echo language::get_string('Key'); ?></label>
                 <div class="col-sm-10">
-                  <input assets/vue/vue.jsmodel="key" type="text"  width="100%" class="form-control" name="key">
+                  <input v-model="key" type="text"  width="100%" class="form-control" name="key">
                 </div>
               </div>
-                <div class="form-group row PartThree" assets/vue/vue.jsif="type != ''" assets/vue/vue.jsfor="index in valuecount">
+                <div class="form-group row PartThree" v-if="type != ''" v-for="index in valuecount">
                   <label for="key" class="col-sm-2 col-form-label">
                     <?php echo language::get_string('Value'); ?>
                       
                     </label>
                   <div class="col-sm-10">
-                    <input assets/vue/vue.jsmodel="values[index-1]" type="text"  width="100%" class="form-control" name="value[]">
+                    <input v-model="values[index-1]" type="text"  width="100%" class="form-control" name="value[]">
                     <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
                   </div>
                 </div>
-                <button assets/vue/vue.jsif="type!=''" type="submit" class="btn btn-success PartFour">
+                <button v-if="type!=''" type="submit" class="btn btn-success PartFour">
                   <?php echo language::get_string('Save'); ?>
                 </button>
-                <a assets/vue/vue.jsif="type != ''" assets/vue/vue.jsshow="type!='String'" @click="addValue()" class="btn btn-light PartFive" style="color: gray;">
+                <a v-if="type != ''" v-show="type!='String'" @click="addValue()" class="btn btn-light PartFive" style="color: gray;">
                   <?php echo language::get_string('Add Value'); ?>
                 </a>
-                <a assets/vue/vue.jsif="type != ''" @click="addExpire()" class="btn btn-warning PartSix">
+                <a v-if="type != ''" @click="addExpire()" class="btn btn-warning PartSix">
                   {{ expireKeyText }}
                 </a>
             </form>
           </div>
         </div>
-        <script src="assets/vue.js"></script>
+        <script src="assets/vue/vue.js"></script>
         <script src="assets/vue/insertForm.js"></script>
       <?php } ?>
   </body>
