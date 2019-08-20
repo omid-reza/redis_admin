@@ -1,8 +1,8 @@
 <?php
 
-use Symfony\Component\Yaml\Yaml;
 use config\config;
 use language\language;
+use Symfony\Component\Yaml\Yaml;
 
 if ( ! isset($_POST['host'])) {
     header('location:../server_register?error=host field not set in request');
@@ -13,6 +13,9 @@ if ( ! isset($_POST['host'])) {
     $database = 0;
     $host = $_POST['host'];
     $servers = config::read_config_file();
+    
+    if (is_null($server))
+        $servers=[];
 
     if(isset($_POST['port']) && $_POST['port'] != '')
         $port= (int) $_POST['port'];
@@ -25,6 +28,7 @@ if ( ! isset($_POST['host'])) {
 
     if (isset($_POST['database']) && $_POST['database'] != '')
         $database = (int) $_POST['database'];
+
     array_push($servers, 
         [
             'name'=> $name,

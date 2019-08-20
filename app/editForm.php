@@ -62,7 +62,9 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="value" class="col-sm-2 col-form-label"><?php echo language::get_string('Value'); ?></label>
+                            <label for="value" class="col-sm-2 col-form-label">
+                              <?php echo language::get_string('Value'); ?>
+                            </label>
                             <div class="col-sm-10">
                               <input type="text" class="form-control" name="value" id="value" value="<?php echo $client->get($_GET['key'])?>">
                             </div>
