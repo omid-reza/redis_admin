@@ -6,8 +6,7 @@ new Vue({
           errors: [],
           password:"",
           database:"",
-          password_confirm:"",
-          btn_password_text:"Use Password"
+          password_confirm:""
         },
         methods:{
             checkForm: function (e) {
@@ -20,9 +19,6 @@ new Vue({
               if (this.password!=this.password_confirm) this.errors.push('password and password confirm should be same');
               if (!this.errors.length) return true;
               e.preventDefault();
-            },
-            change_password_status(){
-              this.btn_password_text=((this.btn_password_text == 'Use Password')?"Don't Use Password":'Use Password');
             }
         }
 });

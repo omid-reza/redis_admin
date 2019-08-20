@@ -12,11 +12,12 @@ if (!isset($_POST['server'])) {
 } elseif (isset($_POST['type']) and isset($_POST['key']) and isset($_POST['value'])) {
     $value = null;
     $key = $_POST['key'];
+    $expire=$_POST['expire'];
     switch ($_POST['type']) {
         case 'String':
             $value = $_POST['value'][0];
-            if (isset($_POST['expire']))
-                $res = StringType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            if (isset($expire) && $expire!='')
+                $res = StringType::insert($_POST['server'], $key, $value, $expire);
             else
                 $res = StringType::insert($_POST['server'], $key, $value);
             if ($res)
@@ -26,8 +27,8 @@ if (!isset($_POST['server'])) {
             break;
         case 'Hashe':
             $value = $_POST['value'];
-            if (isset($_POST['expire']))
-                $res = HashType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            if (isset($expire) && $expire!='')
+                $res = HashType::insert($_POST['server'], $key, $value, $expire);
             else
                 $res = HashType::insert($_POST['server'], $key, $value);
             if ($res)
@@ -37,8 +38,8 @@ if (!isset($_POST['server'])) {
             break;
         case 'List':
             $value = $_POST['value'];
-            if (isset($_POST['expire']))
-                $res = ListType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            if (isset($expire) && $expire!='')
+                $res = ListType::insert($_POST['server'], $key, $value, $expire);
             else
                 $res = ListType::insert($_POST['server'], $key, $value);
             if ($res)
@@ -48,8 +49,8 @@ if (!isset($_POST['server'])) {
             break;
         case 'Set':
             $value = $_POST['value'];
-            if (isset($_POST['expire']))
-                $res = SetType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            if (isset($expire) && $expire!='')
+                $res = SetType::insert($_POST['server'], $key, $value, $expire);
             else
                 $res = SetType::insert($_POST['server'], $key, $value);
             if ($res)
@@ -59,8 +60,8 @@ if (!isset($_POST['server'])) {
             break;
         case 'Sorted List':
             $value = $_POST['value'];
-            if (isset($_POST['expire']))
-                $res = SortedListType::insert($_POST['server'], $key, $value, $_POST['expire']);
+            if (isset($expire) && $expire!='')
+                $res = SortedListType::insert($_POST['server'], $key, $value, $expire);
             else
                 $res = SortedListType::insert($_POST['server'], $key, $value);
             if ($res)

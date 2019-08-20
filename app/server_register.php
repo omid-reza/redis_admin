@@ -29,7 +29,7 @@
                 </h3>
                 <div class="form-group row partFour">
                   <label for="host" class="col-sm-2 col-form-label">
-                    <?php echo language::get_string('Name'); ?>
+                    <?php echo language::get_string('Name').' ('.language::get_string('Optional').')'; ?>
                     </label>
                   <div class="col-sm-10">
                     <input v-model="name" type="text"  width="100%" class="form-control" name="name">
@@ -59,26 +59,25 @@
                     <input v-model="database" type="number"  width="100%" class="form-control" name="database" min="0" max="15" placeholder="<?php echo language::get_string('Default database is 0'); ?>">
                   </div>
                 </div>
-                <div class="form-group row" v-if="btn_password_text!='Use Password'">
+                <div class="form-group row">
                   <label for="password" class="col-sm-2 col-form-label">
-                    <?php echo language::get_string('Password'); ?>
+                    <?php echo language::get_string('Password').' ('.language::get_string('Optional').')'; ?>
                   </label>
                   <div class="col-sm-10">
                     <input v-model="password" type="password"  width="100%" class="form-control" name="password">
                   </div>
                 </div>
-                <div class="form-group row" v-if="btn_password_text!='Use Password'">
+                <div class="form-group row">
                   <label for="password_confirm" class="col-sm-2 col-form-label">
-                    <?php echo language::get_string('Confirm Password'); ?>
+                    <?php echo language::get_string('Confirm Password').' ('.language::get_string('Optional').')'; ?>
                     </label>
                   <div class="col-sm-10">
                     <input v-model="password_confirm" type="password"  width="100%" class="form-control" name="password_confirm">
                   </div>
                 </div>
-                  <button type="submit" class="btn btn-success partOne partThree">
-                    <?php echo language::get_string('Save'); ?>
-                  </button> 
-                  <a class="btn btn-warning partOne partThree partSix" v-text="btn_password_text" @click="change_password_status()"></a> 
+                <button type="submit" class="btn btn-success partOne partThree">
+                  <?php echo language::get_string('Save'); ?>
+                </button>
               </form>
             </div>
           </div>

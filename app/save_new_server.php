@@ -20,7 +20,7 @@ if ( ! isset($_POST['host'])) {
     if(isset($_POST['port']) && $_POST['port'] != '')
         $port= (int) $_POST['port'];
 
-    if (isset($_POST['password']))
+    if (isset($_POST['password'])  && $_POST['password'] != '')
         $pass = $_POST['password'];
 
     if (isset($_POST['name']) && $_POST['name'] != '')

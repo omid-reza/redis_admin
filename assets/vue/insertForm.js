@@ -6,9 +6,7 @@ new Vue({
           errors:[],
           values:[],
           valuecount:1,
-          expireIn:null,
-          addedExpire:false,
-          expireKeyText:"Add Expire Time"
+          expireIn:null
         },
         methods:{
             checkForm: function (e) {
@@ -20,19 +18,9 @@ new Vue({
               if (this.values.length<this.valuecount) this.errors.push('Fill All values');
               if (!this.errors.length) return true;
               e.preventDefault();
-
             },
             addValue(){
                this.valuecount++;
-            },
-            addExpire(){
-              if(this.addedExpire){
-                this.addedExpire=false;
-                this.expireKeyText="Add Expire Time";
-                return;
-              }
-              this.addedExpire=true;
-              this.expireKeyText="Remove Expire Time"; 
             },
             typeChange(){
               if(this.type == 'String') this.valuecount=1;
