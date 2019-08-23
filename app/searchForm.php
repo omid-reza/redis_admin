@@ -4,7 +4,7 @@
   <head>
       <title><?php echo language::get_string('Search'); ?></title>
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/searchForm.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/SearchForm.css">
   </head>
   <body>
       <?php if ( ! isset($_GET['server'])) { ?>
@@ -31,7 +31,7 @@
                   <input type="text" required width="100%" class="form-control" name="key">
                 </div>
               </div>
-                  <button type="submit" class="btn btn-primary partOne PartFour">
+                  <button type="submit" class="btn btn-primary partOne PartFour PartFive">
                     <?php echo language::get_string('Search'); ?>
                   </button>
             </form>

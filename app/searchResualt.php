@@ -7,7 +7,7 @@ use language\language;
   <head>
   	<title><?php echo language::get_string('Search Resualt'); ?></title>
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="assets/css/searchResualt.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/SearchResualt.css">
   </head>
   <body>
   	<?php

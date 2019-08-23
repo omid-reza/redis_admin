@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<link rel="stylesheet" type="text/css" href="assets/css/server_register.css">
+  	<link rel="stylesheet" type="text/css" href="assets/css/ServerRegister.css">
   	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   	<title><?php echo language::get_string('Register New Server'); ?></title>
   </head>
@@ -69,13 +69,13 @@
                 </div>
                 <div class="form-group row">
                   <label for="password_confirm" class="col-sm-2 col-form-label">
-                    <?php echo language::get_string('Confirm Password').' ('.language::get_string('Optional').')'; ?>
+                    <?php echo language::get_string('Confirm Password'); ?>
                     </label>
                   <div class="col-sm-10">
                     <input v-model="password_confirm" type="password"  width="100%" class="form-control" name="password_confirm">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-success partOne partThree">
+                <button type="submit" class="btn btn-success partThree partSeven">
                   <?php echo language::get_string('Save'); ?>
                 </button>
               </form>

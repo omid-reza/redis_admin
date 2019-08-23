@@ -3,7 +3,7 @@
 <html>
     <head>
         <title><?php echo language::get_string('Edit'); ?></title>
-        <link rel="stylesheet" type="text/css" href="assets/css/editForm.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/EditForm.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>
@@ -46,7 +46,7 @@
                     </span>
                     <a href="../" class="btn btn-warning PartThree"><?php echo language::get_string('Back'); ?></a>
                     <div class="alert alert-danger" role="alert">
-                      No record with key <?php echo $_GET['key']; ?>
+                      <?php echo language::get_string('No record with key').' : '.$_GET['key']; ?>
                     </div>
                 </div>
             <?php } else { ?>
@@ -74,7 +74,7 @@
                           </button>
                         </form>
                     </div>
+                  </div>
             <?php } ?>
-            </div>
     </body>
 </html>

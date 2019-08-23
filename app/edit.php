@@ -5,7 +5,7 @@ use language\language; ?>
 <html>
     <head>
     	<title><?php echo language::get_string('Edit Result'); ?></title>
-        <link rel="stylesheet" type="text/css" href="assets/css/edit.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/Edit.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>

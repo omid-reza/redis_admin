@@ -10,7 +10,7 @@
 <html>
     <head>
         <title><?php echo language::get_string('Select Server'); ?></title>
-        <link rel="stylesheet" type="text/css" href="assets/css/select_server.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/SelectServer.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>
@@ -25,7 +25,9 @@
             </div>
         <?php } ?>
     	<div class="container jumbotron PartTwo"> 
-    		<a href="../server_register" class="btn btn-warning PartOne"><?php echo language::get_string('Add server'); ?></a>
+    		<a href="../server_register" class="btn btn-warning PartOne">
+                <?php echo language::get_string('Add server'); ?>        
+            </a>
     	   <div class="alert alert-dark PartSix" role="alert">
     			<?php echo language::get_string('Servers'); ?>
     	   </div>

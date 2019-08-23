@@ -1,14 +1,15 @@
-<?php use language\language; ?>
+<?php 
+use language\language;
+use config\config; ?>
 <!DOCTYPE html>
 <html>
     <head>
     	<title><?php echo language::get_string('Show'); ?></title>
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/show.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/Show.css">
     </head>
     <body>
     	<?php
-            use config\config;
             $config = new config();
             if (!isset($_GET['server'])) {
                 ?>

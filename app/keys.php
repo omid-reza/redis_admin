@@ -5,7 +5,7 @@ use config\config; ?>
 <html>
     <head>
         <title><?php echo language::get_string('Keys List'); ?></title>
-        <link rel="stylesheet" type="text/css" href="assets/css/keys.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/Keys.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>

@@ -1,9 +1,6 @@
  body{
   background-image: linear-gradient(to left,#FC5252,#F237FE);
 }
-.partOne{
-	float: right;
-}
 .partTwo{
 	margin-top: 10%;
 }
@@ -18,4 +15,7 @@
 }
 .partSix{
 	margin-right: 1%;
+}
+.partSeven{
+	width: 100%;
 }
