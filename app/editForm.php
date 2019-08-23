@@ -10,8 +10,7 @@
         <?php
             use config\config;
             $config = new config();
-            if (!isset($_GET['server'])) {
-                ?>
+            if (!isset($_GET['server'])) { ?>
                 <div class="container jumbotron">
                   <span class="btn btn-outline-danger">
                     <?php echo language::get_string('Errors'); ?>
@@ -52,12 +51,12 @@
             <?php } else { ?>
                 <div class="container PartOne">
                     <div class=" container card text-white bg-dark mb-3" >
-                      <form action="../edit?key=<?php echo $_GET['key']; ?>" method="get">
+                      <form action="../Edit?key=<?php echo $_GET['key']; ?>" method="post">
                           <input type="hidden" name="pervios_key" value="<?php echo $_GET['key']; ?>">
+                          <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
                           <div class="form-group row PartFour">
                             <label for="key" class="col-sm-2 col-form-label"><?php echo language::get_string('Key'); ?></label>
                             <div class="col-sm-10">
-                              <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>">
                               <input type="text" class="form-control" name="key" id="key" value="<?php echo $_GET['key']; ?>">
                             </div>
                           </div>

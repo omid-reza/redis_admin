@@ -19,7 +19,7 @@
       <?php } else { ?>
         <div class="container partTwo">
           <div class=" container card text-white bg-dark mb-3" >
-            <form action="../searchResualt" method="post">
+            <form action="../Search" method="post">
               <div class="card-header">
                 <?php echo language::get_string('Search'); ?>
                 <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning partOne"><?php echo language::get_string('Main Page'); ?></a>

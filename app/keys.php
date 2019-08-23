@@ -46,13 +46,13 @@ use config\config; ?>
                 <div class="container jumbotron PartTwo">
                     <div class="PartThree">
                         <div class="PartFour">
-                            <a href="../insertForm?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">
+                            <a href="../Insert?server=<?php echo $_GET['server']; ?>" class="btn btn-success PartFive">
                                 <?php echo language::get_string('Insert'); ?>
                             </a>
                         <a href="../" class="btn btn-warning PartFive partEight">
                             <?php echo language::get_string('Server Lists'); ?>
                         </a>
-                        <a href="../searchForm?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">   <?php echo language::get_string('Search'); ?>
+                        <a href="../Search?server=<?php echo $_GET['server']; ?>" class="btn btn-primary PartFive partEight">   <?php echo language::get_string('Search'); ?>
                         </a>
 
                         </div>

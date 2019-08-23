@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 
 $name=null;
 if (!isset($_GET['server']))
-    return header('location:../select_server?error='.language::get_string('Please set server_id in header !'));
+    return header('location:../SelectServer?error='.language::get_string('Please set server_id in header !'));
 $current_server_id = 0;
 $pervious_servers=config::read_config_file();
 if (array_key_exists($_GET['server'], $pervious_servers)) {

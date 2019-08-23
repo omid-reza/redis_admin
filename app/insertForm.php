@@ -18,11 +18,11 @@
               </div>
       <?php } else { ?>
         <div class="container PartSeven" id="app">
-          <div sif="errors.length" class="container">
+          <div v-if="errors.length" class="container">
             <div class="alert alert-warning" v-for="error in errors" v-text="error"></div>
           </div>
           <div class=" container card text-white bg-dark mb-3" >
-            <form method="post" action="../insert" @submit="checkForm">
+            <form action="Insert" @submit="checkForm" method="post">
               <div class="card-header">
                 <?php echo language::get_string('Insert'); ?>
                 <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartOne">

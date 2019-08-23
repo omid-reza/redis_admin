@@ -8,19 +8,18 @@ class Route
 
     private static function setUp()
     {
-        return isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'/';
+        return (isset($_SERVER['PATH_INFO']))?strtolower($_SERVER['PATH_INFO']):'/';
     }
     public static function get($url, $path)
     {
         $request=static::setUp();
-        
-        if ($request == $url && static::method_name()=='get')
+        if ($request == strtolower($url) && static::method_name()=='get')
             require_once __DIR__.'/../app/'.$path.'.php';
     }
 
     public static function post($url, $path){
         $request=static::setUp();
-        if ($request == $url && static::method_name()=='post')
+        if ($request == strtolower($url) && static::method_name()=='post')
             require_once __DIR__.'/../app/'.$path.'.php';
     }
 

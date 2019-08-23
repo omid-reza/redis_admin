@@ -5,7 +5,7 @@ use language\language;
 use Symfony\Component\Yaml\Yaml;
 
 if ( ! isset($_POST['host'])) {
-    header('location:../server_register?error=host field not set in request');
+    header('location:../NewServer?error=host field not set in request');
 } else {
     $name=null;
     $port=6379;

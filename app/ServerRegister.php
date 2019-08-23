@@ -19,11 +19,11 @@
       <?php } ?>
       <div  id="app">
         <div v-if="errors.length" class="container partFive">
-                  <div class="alert alert-warning" v-for="error in errors" v-text="error"></div>
+          <div class="alert alert-warning" v-for="error in errors" v-text="error"></div>
         </div>
     		<div class="container partTwo">
             <div class=" container card text-white bg-dark mb-3" >
-              <form method="post" action="save_new_server" @submit="checkForm">
+              <form method="post" action="NewServer" @submit="checkForm">
                 <h3 class="card-header">
                   <?php echo language::get_string('Register New Server'); ?>
                 </h3>

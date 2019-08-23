@@ -61,11 +61,11 @@ use config\config; ?>
                         <a href="../keys?server=<?php echo $_GET['server']; ?>" class="btn btn-warning PartThree">
                             <?php echo language::get_string('Main Page'); ?>   
                         </a>  
-                        <a href="../delete?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-danger PartFour">
+                        <a href="../Delete?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-danger PartFour">
                             <?php echo language::get_string('Delete'); ?> 
                         </a>
                         <?php if ($client->type($_GET['key'])=='string'){ ?>
-                            <a href="../editForm?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">
+                            <a href="../Edit?key=<?php echo $_GET['key']; ?>&server=<?php echo $_GET['server']; ?>" class="btn btn-light PartFour">
                             <?php echo language::get_string('Edit'); ?>
                             </a>
                         <?php } ?>

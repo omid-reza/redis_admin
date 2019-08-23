@@ -4,7 +4,7 @@
     use Symfony\Component\Yaml\Yaml;
     $servers = config::read_config_file();
     if (sizeof($servers)==0)
-        header('location:../server_register');
+        header('location:../NewServer');
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
             </div>
         <?php } ?>
     	<div class="container jumbotron PartTwo"> 
-    		<a href="../server_register" class="btn btn-warning PartOne">
+    		<a href="../NewServer" class="btn btn-warning PartOne">
                 <?php echo language::get_string('Add server'); ?>        
             </a>
     	   <div class="alert alert-dark PartSix" role="alert">
@@ -34,7 +34,7 @@
            <?php foreach ($servers as $key => $value) { ?>
     		  <div class="alert alert-success PartSix server" role="alert">
     			<?php echo is_null($value['name'])?($value['host'].':'.$value['port']):$value['name']; ?>
-                <a class="btn btn-danger remove PartThree" href="../server_remove?server=<?php echo $key; ?>">
+                <a class="btn btn-danger remove PartThree" href="../ServerRemove?server=<?php echo $key; ?>">
                     <?php echo language::get_string('Remove'); ?>
                 </a>
                 <a class="btn btn-dark keys PartThree" href="../keys?server=<?php echo $key; ?>">
