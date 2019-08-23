@@ -10,7 +10,7 @@
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/snip77/redis-admin/issues"
+        "issues": "https://github.com/snip77/redis_admin/issues"
     },
     "authors": [
         {
