@@ -23,9 +23,9 @@
     "autoload": {
         "psr-4": {
             "Operator\\": "app/Operator/",
-            "config\\": "Config/",
-            "Route\\": "Routing/",
-            "language\\":"Languages/"
+            "config\\": "config/",
+            "Route\\": "routing/",
+            "language\\":"languages/"
         }
     },
     "config": {
