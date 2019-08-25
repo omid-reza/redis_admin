@@ -61,7 +61,7 @@ use config\config; ?>
                   <div class="form-group row PartFour">
                     <label for="key" class="col-sm-2 col-form-label"><?php echo language::get_string('Key'); ?></label>
                     <div class="col-sm-10">
-                      <input v-model="key" type="text" class="form-control" name="key" id="key" placeholder="<?php echo($_GET['key']); ?>">
+                      <input v-model="key" type="text" class="form-control" name="key" id="key">
                     </div>
                   </div>
                   <div class="form-group row">

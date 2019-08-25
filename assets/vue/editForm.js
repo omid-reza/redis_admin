@@ -1,4 +1,4 @@
-new Vue({
+let app=new Vue({
         el: '#app',
         data: {
           key : '',
@@ -15,3 +15,6 @@ new Vue({
             }
         }
 });
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('key'))
+  app.key=urlParams.get('key');
