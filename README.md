@@ -12,17 +12,17 @@
     <a href="https://php.net/" target="_blank">
         <img alt="Minimum PHP Version" src="https://img.shields.io/badge/php-%3E%3D%207.1.3-8892BF.svg">
     </a>
-    <a href="https://www.codefactor.io/repository/github/snip77/redis_admin">
-        <img src="https://www.codefactor.io/repository/github/snip77/redis_admin/badge" />
+    <a href="https://www.codefactor.io/repository/github/omid-reza/redis_admin">
+        <img src="https://www.codefactor.io/repository/github/omid-reza/redis_admin/badge" />
     </a>
     <a href="https://packagist.org/packages/redis_admin/redis_admin">
         <img alt="composer.lock" src='https://poser.pugx.org/redis_admin/redis_admin/composerlock'>
     </a>
 </p>
 
-* [Requirments](https://github.com/snip77/redis_admin/wiki/Requirments)
-* [Installation](https://github.com/snip77/redis_admin/wiki/Installation)
-* [Server Configurations](https://github.com/snip77/redis_admin/wiki/Server-Configurations)
-* [SetUp](https://github.com/snip77/redis_admin/wiki/SetUp)
-* [Features](https://github.com/snip77/redis_admin/wiki/Features)
-* [Localization](https://github.com/snip77/redis_admin/wiki/Localization)
+* [Requirments](https://github.com/omid-reza/redis_admin/wiki/Requirments)
+* [Installation](https://github.com/omid-reza/redis_admin/wiki/Installation)
+* [Server Configurations](https://github.com/omid-reza/redis_admin/wiki/Server-Configurations)
+* [SetUp](https://github.com/omid-reza/redis_admin/wiki/SetUp)
+* [Features](https://github.com/omid-reza/redis_admin/wiki/Features)
+* [Localization](https://github.com/omid-reza/redis_admin/wiki/Localization)
