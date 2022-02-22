@@ -72,19 +72,20 @@ use config\config; ?>
                         <?php echo language::get_string(($client->dbsize()==0)?'No Key':'Keys');?>
                     </div>
                 <?php
-                $pagedArray = array_chunk($client->keys('*'), 10, true);
-                $page = 1;
-                if (isset($_GET['page']))
-                    $page = (int) $_GET['page'];
+                if ($client->dbsize()>0) {
+                    $pagedArray = array_chunk($client->keys('*'), 10, true);
+                    $page = 1;
+                    if (isset($_GET['page']))
+                        $page = (int) $_GET['page'];
 
-                foreach ($pagedArray[$page - 1] as $key => $value) {
-                    ?>
-                    <a class="PartSeven" href="show?key=<?php echo $value; ?>&server=<?php echo $_GET['server']; ?>">
-                        <div class="alert alert-success PartSix" role="alert">
-                                <?php echo $value; ?>
-                        </div>
-                    </a>
-            <?php } } ?>
+                    foreach ($pagedArray[$page - 1] as $key => $value) {
+                        ?>
+                        <a class="PartSeven" href="show?key=<?php echo $value; ?>&server=<?php echo $_GET['server']; ?>">
+                            <div class="alert alert-success PartSix" role="alert">
+                                    <?php echo $value; ?>
+                            </div>
+                        </a>
+            <?php } } }?>
             </div>
             <?php if ($key_count > 10) { ?>
                 <nav aria-label="Pages">
